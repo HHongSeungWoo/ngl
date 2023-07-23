@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import {
   assignResidueTypeBonds, calculateBondsBetween,
@@ -152,6 +152,6 @@ class PsfParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('psf', PsfParser)
+
 
 export default PsfParser

@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import VolumeParser from './volume-parser'
 
 const reWhitespace = /\s+/
@@ -180,7 +180,7 @@ class XplorParser extends VolumeParser {
   }
 }
 
-ParserRegistry.add('xplor', XplorParser)
-ParserRegistry.add('cns', XplorParser)
+
+
 
 export default XplorParser

@@ -6,7 +6,7 @@
 
 import { Vector3, Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { ensureBuffer } from '../utils'
 import VolumeParser from './volume-parser'
 
@@ -275,8 +275,8 @@ class MrcParser extends VolumeParser {
   }
 }
 
-ParserRegistry.add('mrc', MrcParser)
-ParserRegistry.add('ccp4', MrcParser)
-ParserRegistry.add('map', MrcParser)
+
+
+
 
 export default MrcParser

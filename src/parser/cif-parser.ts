@@ -6,7 +6,7 @@
 
 import { Vector3, Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import { HelixTypes } from './pdb-parser'
 import Entity from '../structure/entity'
@@ -1174,9 +1174,5 @@ class CifParser extends StructureParser {
     if (Debug) Log.timeEnd('CifParser._parse ' + this.name)
   }
 }
-
-ParserRegistry.add('cif', CifParser)
-ParserRegistry.add('mcif', CifParser)
-ParserRegistry.add('mmcif', CifParser)
 
 export default CifParser

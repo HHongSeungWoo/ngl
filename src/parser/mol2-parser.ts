@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import {
   assignResidueTypeBonds,
   calculateChainnames, calculateSecondaryStructure,
@@ -194,6 +194,6 @@ class Mol2Parser extends StructureParser {
   }
 }
 
-ParserRegistry.add('mol2', Mol2Parser)
+
 
 export default Mol2Parser

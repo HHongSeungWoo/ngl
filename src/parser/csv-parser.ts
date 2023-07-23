@@ -5,7 +5,6 @@
  */
 
 import { defaults } from '../utils'
-import { ParserRegistry } from '../globals'
 import Parser, { ParserParameters } from './parser'
 import Streamer from '../streamer/streamer';
 
@@ -70,7 +69,5 @@ class CsvParser extends Parser {
     })
   }
 }
-
-ParserRegistry.add('csv', CsvParser)
 
 export default CsvParser

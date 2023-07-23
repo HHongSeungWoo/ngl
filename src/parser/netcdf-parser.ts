@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import Parser, { ParserParameters } from './parser'
 import NetcdfReader from '../utils/netcdf-reader'
 import Streamer from '../streamer/streamer';
@@ -35,6 +35,6 @@ class NetcdfParser extends Parser {
   }
 }
 
-ParserRegistry.add('netcdf', NetcdfParser)
+
 
 export default NetcdfParser

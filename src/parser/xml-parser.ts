@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { defaults } from '../utils'
 // @ts-ignore: unused import XMLNode required for declaration only
 import { parseXml, XMLNode } from '../utils/parse-xml'
@@ -65,6 +65,6 @@ class XmlParser extends Parser {
   }
 }
 
-ParserRegistry.add('xml', XmlParser)
+
 
 export default XmlParser

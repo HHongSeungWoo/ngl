@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { degToRad } from '../math/math-utils'
 import VolumeParser from './volume-parser'
 
@@ -148,6 +148,6 @@ class DxParser extends VolumeParser {
   }
 }
 
-ParserRegistry.add('dx', DxParser)
+
 
 export default DxParser

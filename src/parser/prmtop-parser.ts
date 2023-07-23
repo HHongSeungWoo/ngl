@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import {
   assignResidueTypeBonds, calculateBondsBetween,
@@ -231,7 +231,7 @@ class PrmtopParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('prmtop', PrmtopParser)
-ParserRegistry.add('parm7', PrmtopParser)
+
+
 
 export default PrmtopParser

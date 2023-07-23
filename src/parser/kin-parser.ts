@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { Vector3 } from 'three'
 import Parser from './parser'
 
@@ -788,6 +788,6 @@ class KinParser extends Parser {
   }
 }
 
-ParserRegistry.add('kin', KinParser)
+
 
 export default KinParser

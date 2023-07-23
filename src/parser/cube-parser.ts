@@ -6,7 +6,7 @@
 
 import { Matrix4, Vector3 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import VolumeParser from './volume-parser'
 
 // @author Johanna Tiemann <johanna.tiemann@googlemail.com>
@@ -112,8 +112,5 @@ class CubeParser extends VolumeParser {
     return matrix
   }
 }
-
-ParserRegistry.add('cub', CubeParser)
-ParserRegistry.add('cube', CubeParser)
 
 export default CubeParser

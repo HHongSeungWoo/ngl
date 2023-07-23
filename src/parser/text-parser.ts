@@ -4,7 +4,6 @@
  * @private
  */
 
-import { ParserRegistry } from '../globals'
 import Parser, { ParserParameters } from './parser'
 import Streamer from '../streamer/streamer';
 
@@ -29,7 +28,7 @@ class TextParser extends Parser {
   }
 }
 
-ParserRegistry.add('txt', TextParser)
-ParserRegistry.add('text', TextParser)
+
+
 
 export default TextParser

@@ -4,7 +4,8 @@
  * @private
  */
 
-import { getBrowser, getQuery, boolean } from './utils'
+export {Debug, setDebug, Log} from "./logger"
+import { getBrowser } from './utils'
 import Registry from './utils/registry'
 import _ColormakerRegistry from './color/colormaker-registry'
 import _ParserRegistry from './parser/parser-registry'
@@ -36,15 +37,6 @@ export function setExtensionFragDepth (value: boolean) {
   ExtensionFragDepth = value
 }
 
-export const Log = {
-  log: Function.prototype.bind.call(console.log, console),
-  info: Function.prototype.bind.call(console.info, console),
-  warn: Function.prototype.bind.call(console.warn, console),
-  error: Function.prototype.bind.call(console.error, console),
-  time: Function.prototype.bind.call(console.time, console),
-  timeEnd: Function.prototype.bind.call(console.timeEnd, console)
-}
-
 export let MeasurementDefaultParams: Partial<MeasurementRepresentationParameters> = {
   color: 'green',
   labelColor: 0x808080,
@@ -67,17 +59,11 @@ export function setMeasurementDefaultParams (params = {}) {
   Object.assign(MeasurementDefaultParams, params)
 }
 
-export let Debug = boolean(getQuery('debug'))
-export function setDebug (value: boolean) {
-  Debug = value
-}
-
 export const WebglErrorMessage = '<div style="display:flex;align-items:center;justify-content:center;height:100%;"><p style="padding:15px;text-align:center;">Your browser/graphics card does not seem to support <a target="_blank" href="https://en.wikipedia.org/wiki/WebGL">WebGL</a>.<br/><br/>Find out how to get it <a target="_blank" href="http://get.webgl.org/">here</a>.</p></div>'
 
 /**
  * List of file extensions to be recognized as scripts
  */
-export const ScriptExtensions = [ 'ngl', 'js' ]
 
 export const WorkerRegistry = new _WorkerRegistry()
 export const ColormakerRegistry = new _ColormakerRegistry()

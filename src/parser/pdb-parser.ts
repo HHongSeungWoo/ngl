@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { defaults } from '../utils'
 import StructureParser from './structure-parser'
 import Entity, { EntityTypeString } from '../structure/entity'
@@ -719,9 +719,9 @@ class PdbParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('pdb', PdbParser)
-ParserRegistry.add('pdb1', PdbParser)
-ParserRegistry.add('ent', PdbParser)
+
+
+
 
 export default PdbParser
 

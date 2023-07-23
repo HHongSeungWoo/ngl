@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { ensureBuffer } from '../utils'
 import TrajectoryParser from './trajectory-parser'
 
@@ -132,6 +132,6 @@ class TrrParser extends TrajectoryParser {
   }
 }
 
-ParserRegistry.add('trr', TrrParser)
+
 
 export default TrrParser

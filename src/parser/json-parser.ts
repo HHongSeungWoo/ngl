@@ -4,7 +4,6 @@
  * @private
  */
 
-import { ParserRegistry } from '../globals'
 import { defaults } from '../utils'
 import Parser, { ParserParameters } from './parser'
 import Streamer from '../streamer/streamer';
@@ -41,6 +40,6 @@ class JsonParser extends Parser {
   }
 }
 
-ParserRegistry.add('json', JsonParser)
+
 
 export default JsonParser

@@ -5,7 +5,7 @@
  */
 
 import {
-  DatasourceRegistry, DecompressorRegistry, ParserRegistry, ScriptExtensions
+  DatasourceRegistry, DecompressorRegistry, ParserRegistry
 } from '../globals'
 import ParserLoader, { ParserParams } from './parser-loader'
 import ScriptLoader from './script-loader'
@@ -111,7 +111,7 @@ export function autoLoad (file: LoaderInput, params: Partial<LoaderParameters & 
   let loader
   if (ParserRegistry.names.includes(p.ext)) {
     loader = new ParserLoader(p.src, p)
-  } else if (ScriptExtensions.includes(p.ext)) {
+  } else if ([ 'ngl', 'js' ].includes(p.ext)) {
     loader = new ScriptLoader(p.src, p)
   }
 

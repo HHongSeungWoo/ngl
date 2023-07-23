@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import { defaults } from '../utils'
 import Streamer from '../streamer/streamer';
 

@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { uint8ToLines, ensureBuffer } from '../utils'
 import DxParser from './dx-parser'
 
@@ -37,6 +37,6 @@ class DxbinParser extends DxParser {
   }
 }
 
-ParserRegistry.add('dxbin', DxbinParser)
+
 
 export default DxbinParser

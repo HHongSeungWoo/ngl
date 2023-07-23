@@ -9,10 +9,11 @@
  * @module NGL
  */
 
+
 export {
   Debug, setDebug,
   MeasurementDefaultParams, setMeasurementDefaultParams,
-  ScriptExtensions, ColormakerRegistry,
+  ColormakerRegistry,
   DatasourceRegistry, DecompressorRegistry,
   ParserRegistry, RepresentationRegistry,
   setListingDatasource, setTrajectoryDatasource,
@@ -126,46 +127,13 @@ import TextBuffer from './buffer/text-buffer'
 import TorusBuffer from './buffer/torus-buffer'
 import WidelineBuffer from './buffer/wideline-buffer'
 
-//
-
-import './parser/cif-parser'
-import './parser/gro-parser'
-import './parser/mmtf-parser'
-import './parser/mol2-parser'
-import './parser/pdb-parser'
-import './parser/pdbqt-parser'
-import './parser/pqr-parser'
-import './parser/sdf-parser'
-
-import './parser/prmtop-parser'
-import './parser/psf-parser'
-import './parser/top-parser'
-
-import './parser/dcd-parser'
-import './parser/nctraj-parser'
-import './parser/trr-parser'
-import './parser/xtc-parser'
-
-import './parser/cube-parser'
-import './parser/dsn6-parser'
-import './parser/dx-parser'
-import './parser/dxbin-parser'
-import './parser/mrc-parser'
-import './parser/xplor-parser'
-
-import './parser/kin-parser'
-import './parser/obj-parser'
-import './parser/ply-parser'
-
-import './parser/csv-parser'
-import './parser/json-parser'
-import './parser/msgpack-parser'
-import './parser/netcdf-parser'
-import './parser/text-parser'
-import './parser/xml-parser'
-
-import './parser/validation-parser'
-
+// parser export
+export {default as MmtfParser} from './parser/mmtf-parser'
+export {default as Mol2Parser} from './parser/mol2-parser'
+export {default as PdbParser} from './parser/pdb-parser'
+export {default as PdbqtParser} from './parser/pdbqt-parser'
+export {default as PqrParser} from './parser/pqr-parser'
+export {default as SdfParser} from './parser/sdf-parser'
 //
 
 import Shape from './geometry/shape'

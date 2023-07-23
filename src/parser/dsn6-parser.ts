@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { ensureBuffer } from '../utils'
 import { degToRad } from '../math/math-utils'
 import VolumeParser from './volume-parser'
@@ -227,7 +227,7 @@ class Dsn6Parser extends VolumeParser {
   }
 }
 
-ParserRegistry.add('dsn6', Dsn6Parser)
-ParserRegistry.add('brix', Dsn6Parser)
+
+
 
 export default Dsn6Parser

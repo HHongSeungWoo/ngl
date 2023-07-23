@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import Parser, { ParserParameters } from './parser'
 
 import { decodeMsgpack } from '../../lib/mmtf.es6'
@@ -36,6 +36,6 @@ class MsgpackParser extends Parser {
   }
 }
 
-ParserRegistry.add('msgpack', MsgpackParser)
+
 
 export default MsgpackParser

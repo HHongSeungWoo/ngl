@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { assignResidueTypeBonds } from '../structure/structure-utils'
 import StructureParser from './structure-parser'
 
@@ -238,8 +238,8 @@ class SdfParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('sdf', SdfParser)
-ParserRegistry.add('sd', SdfParser)
-ParserRegistry.add('mol', SdfParser)
+
+
+
 
 export default SdfParser

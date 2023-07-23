@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { ensureBuffer } from '../utils'
 import TrajectoryParser from './trajectory-parser'
 import { NumberArray } from '../types';
@@ -374,6 +374,6 @@ class XtcParser extends TrajectoryParser {
   }
 }
 
-ParserRegistry.add('xtc', XtcParser)
+
 
 export default XtcParser

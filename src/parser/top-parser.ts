@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import { WaterNames } from '../structure/structure-constants'
 import {
@@ -187,6 +187,6 @@ class TopParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('top', TopParser)
+
 
 export default TopParser

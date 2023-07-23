@@ -6,7 +6,6 @@
 
 import { BufferGeometry, BufferAttribute } from 'three'
 
-import { ParserRegistry } from '../globals'
 import SurfaceParser from './surface-parser'
 
 export interface _OBJLoader {
@@ -374,6 +373,6 @@ class ObjParser extends SurfaceParser {
   }
 }
 
-ParserRegistry.add('obj', ObjParser)
+
 
 export default ObjParser

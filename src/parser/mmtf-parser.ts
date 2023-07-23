@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import {
   buildUnitcellAssembly, calculateBondsBetween, calculateBondsWithin
@@ -388,6 +388,6 @@ class MmtfParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('mmtf', MmtfParser)
+
 
 export default MmtfParser

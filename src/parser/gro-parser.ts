@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import StructureParser from './structure-parser'
 import {
   calculateBonds, calculateChainnames, calculateSecondaryStructure
@@ -144,6 +144,6 @@ class GroParser extends StructureParser {
   }
 }
 
-ParserRegistry.add('gro', GroParser)
+
 
 export default GroParser

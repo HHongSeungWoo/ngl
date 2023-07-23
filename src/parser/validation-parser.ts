@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import XmlParser, { XmlParserParameters } from './xml-parser'
 import Validation from '../structure/validation'
 import Streamer from '../streamer/streamer';
@@ -33,6 +33,6 @@ class ValidationParser extends XmlParser {
   }
 }
 
-ParserRegistry.add('validation', ValidationParser)
+
 
 export default ValidationParser

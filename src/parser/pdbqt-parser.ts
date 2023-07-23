@@ -4,7 +4,6 @@
  * @private
  */
 
-import { ParserRegistry } from '../globals'
 import PdbParser from './pdb-parser'
 
 // autodock variant of PDB format with
@@ -16,6 +15,6 @@ class PdbqtParser extends PdbParser {
   get type () { return 'pdbqt' }
 }
 
-ParserRegistry.add('pdbqt', PdbqtParser)
+
 
 export default PdbqtParser

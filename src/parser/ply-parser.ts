@@ -6,7 +6,6 @@
 
 import { Geometry, Vector3, Face3, Color } from 'three'
 
-import { ParserRegistry } from '../globals'
 import SurfaceParser from './surface-parser'
 
 /**
@@ -422,6 +421,6 @@ class PlyParser extends SurfaceParser {
   }
 }
 
-ParserRegistry.add('ply', PlyParser)
+
 
 export default PlyParser

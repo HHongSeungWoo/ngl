@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import { uint8ToString, ensureBuffer } from '../utils'
 import TrajectoryParser from './trajectory-parser'
 
@@ -196,6 +196,6 @@ class DcdParser extends TrajectoryParser {
   }
 }
 
-ParserRegistry.add('dcd', DcdParser)
+
 
 export default DcdParser

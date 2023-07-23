@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug, Log, ParserRegistry } from '../globals'
+import { Debug, Log } from "../logger";
 import TrajectoryParser from './trajectory-parser'
 import NetcdfReader from '../utils/netcdf-reader'
 
@@ -50,9 +50,5 @@ class NctrajParser extends TrajectoryParser {
     if (Debug) Log.timeEnd('NctrajParser._parse ' + this.name)
   }
 }
-
-ParserRegistry.add('nctraj', NctrajParser)
-ParserRegistry.add('ncdf', NctrajParser)
-ParserRegistry.add('nc', NctrajParser)
 
 export default NctrajParser

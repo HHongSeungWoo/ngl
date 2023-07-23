@@ -71,7 +71,6 @@
     "@types/offscreencanvas": "^2019.6.4",
     "@types/signals": "1.0.1",
     "@types/sprintf-js": "^1.1.2",
-    "@yushijinhun/three-minifier-rollup": "^0.3.1",
     "babel-plugin-array-includes": "^2.0.3",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",

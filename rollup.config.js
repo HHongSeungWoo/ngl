@@ -2,22 +2,19 @@ import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import buble from '@rollup/plugin-buble'
-import internal from 'rollup-plugin-internal'
-
-// import terser from 'rollup-plugin-terser'
 
 var path = require('path')
 var pkg = require('./package.json')
 
 // When building UMD or ES6 module, mark dependencies as external
 export const moduleExternals = Object.keys(pkg.dependencies)
-export const moduleGlobals = {three: 'three'}
-export const umdGlobals = {'promise-polyfill': '_Promise',
+export const moduleGlobals = { three: 'three' }
+export const umdGlobals = {
   'chroma-js': 'chroma',
   'signals': 'signalsWrapper',
   'sprintf-js': 'sprintfJs',
-  three: 'three'}
+  three: 'three'
+}
 
 function glsl () {
   return {
@@ -42,7 +39,7 @@ function glsl () {
           .replace(/ {2,}/g, ' ')
           .replace(/ *\n */g, '\n')
       )
-      var register = "ShaderRegistry.add('" + key + "', " + shader + ');'
+      var register = 'ShaderRegistry.add(\'' + key + '\', ' + shader + ');'
       code = registryImport + register
       return { code: code, map: { mappings: '' } }
     }
@@ -61,16 +58,15 @@ function text () {
 }
 
 export const plugins = [
-  typescript({sourceMap: true, inlineSources: true}),
+  typescript({ sourceMap: true, inlineSources: true }),
   resolve({
     jsnext: true,
-    main: true
+    main: true,
   }),
   commonjs(),
   glsl(),
   text(),
   json(),
-  buble()
 ]
 
 const moduleConfig = {
@@ -98,7 +94,7 @@ const moduleConfig = {
 // this version has three.js and everything else built in
 const bundleConfig = {
   input: 'src/ngl.ts',
-  plugins: [...plugins, internal(['three'])],
+  plugins: [...plugins],
   output: {
     file: 'build/js/ngl.dev.js',
     format: 'umd',

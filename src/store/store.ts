@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 import { getTypedArray, TypedArrayString } from '../utils'
 
 export type StoreField = [string, number, TypedArrayString]

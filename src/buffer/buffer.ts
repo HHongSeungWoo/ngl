@@ -15,7 +15,7 @@ import {
   ShaderMaterial
 } from 'three'
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 import { createParams, getTypedArray, getUintArray } from '../utils'
 import { GenericColor, NumberArray } from '../types'
 import { getShader, ShaderDefines } from '../shader/shader-utils'
@@ -381,22 +381,22 @@ class Buffer {
       edges.length = 0
 
       for (let i = 0; i < n; i += 3) {
-        const a = array[ i + 0 ]
+        const a = array[ i ]
         const b = array[ i + 1 ]
         const c = array[ i + 2 ]
 
         if (checkEdge(a, b)) {
-          wireframeIndex[ j + 0 ] = a
+          wireframeIndex[ j ] = a
           wireframeIndex[ j + 1 ] = b
           j += 2
         }
         if (checkEdge(b, c)) {
-          wireframeIndex[ j + 0 ] = b
+          wireframeIndex[ j ] = b
           wireframeIndex[ j + 1 ] = c
           j += 2
         }
         if (checkEdge(c, a)) {
-          wireframeIndex[ j + 0 ] = c
+          wireframeIndex[ j ] = c
           wireframeIndex[ j + 1 ] = a
           j += 2
         }
@@ -416,7 +416,7 @@ class Buffer {
       }
 
       for (let i = 0, j = 0; i < n; i += 3) {
-        wireframeIndex[ j + 0 ] = i
+        wireframeIndex[ j ] = i
         wireframeIndex[ j + 1 ] = i + 1
         wireframeIndex[ j + 2 ] = i + 1
         wireframeIndex[ j + 3 ] = i + 2

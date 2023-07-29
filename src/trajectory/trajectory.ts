@@ -6,7 +6,7 @@
 
 import { Signal } from 'signals'
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 import { defaults } from '../utils'
 import { NumberArray } from '../types'
 import { circularMean, arrayMean } from '../math/array-utils'
@@ -37,7 +37,7 @@ function centerPbc (coords: NumberArray, mean: number[], box: ArrayLike<number>)
   const fz = -mz + bz + bz / 2
 
   for (let i = 0; i < n; i += 3) {
-    coords[ i + 0 ] = (coords[ i + 0 ] + fx) % bx
+    coords[ i ] = (coords[ i ] + fx) % bx
     coords[ i + 1 ] = (coords[ i + 1 ] + fy) % by
     coords[ i + 2 ] = (coords[ i + 2 ] + fz) % bz
   }
@@ -340,7 +340,7 @@ class Trajectory {
     for (let i = 0; i < n; i += 3) {
       const j = this.selectionIndices[ i / 3 ] * 3
 
-      coords2[ i + 0 ] = y[ j + 0 ]
+      coords2[ i ] = y[ j ]
       coords2[ i + 1 ] = y[ j + 1 ]
       coords2[ i + 2 ] = y[ j + 2 ]
     }
@@ -547,7 +547,7 @@ class Trajectory {
     for (let i = 0; i < n; i += 3) {
       const j = this.selectionIndices[ i / 3 ] * 3
 
-      coords1[ i + 0 ] = x[ j + 0 ]
+      coords1[ i ] = x[ j ]
       coords1[ i + 1 ] = x[ j + 1 ]
       coords1[ i + 2 ] = x[ j + 2 ]
     }

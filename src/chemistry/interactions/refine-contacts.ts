@@ -6,7 +6,7 @@
 
 import { Vector3 } from 'three'
 
-import { Debug, Log } from '../../globals'
+import { Debug, Log } from '../../logger'
 import { defaults } from '../../utils'
 import Structure from '../../structure/structure'
 import AtomProxy from '../../proxy/atom-proxy'

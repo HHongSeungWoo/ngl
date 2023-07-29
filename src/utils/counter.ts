@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 
 import * as signalsWrapper from 'signals'
 

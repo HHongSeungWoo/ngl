@@ -644,7 +644,7 @@ class AtomProxy {
    * @return {AtomProxy} this object
    */
   positionFromArray (array: NumberArray, offset = 0) {
-    this.x = array[ offset + 0 ]
+    this.x = array[ offset ]
     this.y = array[ offset + 1 ]
     this.z = array[ offset + 2 ]
 
@@ -661,7 +661,7 @@ class AtomProxy {
     const index = this.index
     const atomStore = this.atomStore
 
-    array[ offset + 0 ] = atomStore.x[ index ]
+    array[ offset ] = atomStore.x[ index ]
     array[ offset + 1 ] = atomStore.y[ index ]
     array[ offset + 2 ] = atomStore.z[ index ]
 

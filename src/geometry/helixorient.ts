@@ -68,7 +68,7 @@ class Helixorient {
         for (let k = 1; k <= w; ++k) {
           const l = k * 3
           const t = (w + 1 - k) / (w + 1)
-          v.x += t * center[ idx3 - l + 0 ] + t * center[ idx3 + l + 0 ]
+          v.x += t * center[ idx3 - l ] + t * center[ idx3 + l ]
           v.y += t * center[ idx3 - l + 1 ] + t * center[ idx3 + l + 1 ]
           v.z += t * center[ idx3 - l + 2 ] + t * center[ idx3 + l + 2 ]
         }

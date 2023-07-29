@@ -6,7 +6,7 @@
 
 import { Vector3, Box3 } from 'three'
 
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import Structure from './structure'
 import Selection from '../selection/selection'
 import BitArray from '../utils/bitarray'

@@ -568,7 +568,7 @@ class TextBuffer extends MappedQuadBuffer {
       // background
       if (this.parameters.showBackground) {
         i = iCharAll * 2 * 4
-        inputMapping[ i + 0 ] = -ta.lineHeight / 6 - xShift - margin  // top left
+        inputMapping[ i ] = -ta.lineHeight / 6 - xShift - margin  // top left
         inputMapping[ i + 1 ] = ta.lineHeight - yShift + margin
         inputMapping[ i + 2 ] = -ta.lineHeight / 6 - xShift - margin  // bottom left
         inputMapping[ i + 3 ] = 0 - yShift - margin
@@ -576,7 +576,7 @@ class TextBuffer extends MappedQuadBuffer {
         inputMapping[ i + 5 ] = ta.lineHeight - yShift + margin
         inputMapping[ i + 6 ] = xadvance + ta.lineHeight / 6 - xShift + 2 * ta.parameters.outline + margin  // bottom right
         inputMapping[ i + 7 ] = 0 - yShift - margin
-        inputTexCoord[ i + 0 ] = 10
+        inputTexCoord[ i ] = 10
         inputTexCoord[ i + 2 ] = 10
         inputTexCoord[ i + 4 ] = 10
         inputTexCoord[ i + 6 ] = 10
@@ -589,7 +589,7 @@ class TextBuffer extends MappedQuadBuffer {
         c = ta.get(txt[ iChar ])
         i = iCharAll * 2 * 4
 
-        inputMapping[ i + 0 ] = xadvance - xShift  // top left
+        inputMapping[ i ] = xadvance - xShift  // top left
         inputMapping[ i + 1 ] = c.h - yShift
         inputMapping[ i + 2 ] = xadvance - xShift  // bottom left
         inputMapping[ i + 3 ] = 0 - yShift

@@ -53,7 +53,7 @@ export function calculateCenterArray <T extends NumberArray = Float32Array>(arra
   const c = center || new Float32Array(n)
 
   for (let i = 0; i < n; i += 3) {
-    c[ offset + i + 0 ] = (array1[ i + 0 ] + array2[ i + 0 ]) / 2.0
+    c[ offset + i ] = (array1[ i ] + array2[ i ]) / 2.0
     c[ offset + i + 1 ] = (array1[ i + 1 ] + array2[ i + 1 ]) / 2.0
     c[ offset + i + 2 ] = (array1[ i + 2 ] + array2[ i + 2 ]) / 2.0
   }
@@ -66,7 +66,7 @@ export function calculateDirectionArray (array1: NumberArray, array2: NumberArra
   const direction = new Float32Array(n)
 
   for (let i = 0; i < n; i += 3) {
-    direction[ i + 0 ] = array2[ i + 0 ] - array1[ i + 0 ]
+    direction[ i ] = array2[ i ] - array1[ i ]
     direction[ i + 1 ] = array2[ i + 1 ] - array1[ i + 1 ]
     direction[ i + 2 ] = array2[ i + 2 ] - array1[ i + 2 ]
   }
@@ -90,7 +90,7 @@ export function uniformArray3 (n: number, a: number, b: number, c: number, optio
   for (let i = 0; i < n; ++i) {
     const j = i * 3
 
-    array[ j + 0 ] = a
+    array[ j ] = a
     array[ j + 1 ] = b
     array[ j + 2 ] = c
   }
@@ -142,7 +142,7 @@ export function randomColorArray (n: number) {
   for (let i = 0; i < n; ++i) {
     const j = i * 3
 
-    array[ j + 0 ] = Math.random()
+    array[ j ] = Math.random()
     array[ j + 1 ] = Math.random()
     array[ j + 2 ] = Math.random()
   }
@@ -174,14 +174,14 @@ export function replicateArray3Entries (array: NumberArray, m: number) {
     const v = i * 3
     const k = i * m * 3
 
-    const a = array[ v + 0 ]
+    const a = array[ v ]
     const b = array[ v + 1 ]
     const c = array[ v + 2 ]
 
     for (let j = 0; j < m; ++j) {
       const l = k + j * 3
 
-      repArr[ l + 0 ] = a
+      repArr[ l ] = a
       repArr[ l + 1 ] = b
       repArr[ l + 2 ] = c
     }

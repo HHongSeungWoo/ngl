@@ -5,7 +5,7 @@
 
 import { Color } from 'three'
 
-import { Debug, Log } from '../../globals'
+import { Debug, Log } from '../../logger'
 import { createParams } from '../../utils'
 import { TextBufferData } from '../../buffer/text-buffer'
 import Structure from '../../structure/structure'

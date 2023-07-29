@@ -966,7 +966,7 @@ class CifParser extends StructureParser {
               if (asTrajectory) {
                 const frameOffset = currentCoord * 3
 
-                currentFrame[ frameOffset + 0 ] = x
+                currentFrame[ frameOffset ] = x
                 currentFrame[ frameOffset + 1 ] = y
                 currentFrame[ frameOffset + 2 ] = z
 

@@ -7,7 +7,7 @@
 import '../shader/Line.vert'
 import '../shader/Line.frag'
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 import Buffer, { BufferParameters, BufferData } from './buffer'
 
 function getSize(data: BufferData){

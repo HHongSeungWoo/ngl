@@ -162,7 +162,7 @@ class SdfParser extends StructureParser {
           if (asTrajectory) {
             const j = currentCoord * 3
 
-            currentFrame[ j + 0 ] = x
+            currentFrame[ j ] = x
             currentFrame[ j + 1 ] = y
             currentFrame[ j + 2 ] = z
 

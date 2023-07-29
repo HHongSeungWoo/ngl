@@ -43,7 +43,7 @@ class StructureTrajectory extends Trajectory {
         const j3 = j * 3
         const idx3 = indices[ j ] * 3
 
-        coords[ j3 + 0 ] = frame[ idx3 + 0 ]
+        coords[ j3 ] = frame[ idx3 ]
         coords[ j3 + 1 ] = frame[ idx3 + 1 ]
         coords[ j3 + 2 ] = frame[ idx3 + 2 ]
       }

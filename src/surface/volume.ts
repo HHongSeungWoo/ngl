@@ -371,7 +371,7 @@ class Volume {
       for (let z = 0; z < nz; ++z) {
         for (let y = 0; y < ny; ++y) {
           for (let x = 0; x < nx; ++x) {
-            position[ p + 0 ] = x
+            position[ p ] = x
             position[ p + 1 ] = y
             position[ p + 2 ] = z
             p += 3

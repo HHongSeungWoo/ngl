@@ -6,7 +6,7 @@
 
 import { Vector3, Matrix4 } from 'three'
 
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import { binarySearchIndexOf } from '../utils'
 import Helixbundle from '../geometry/helixbundle'
 import Kdtree from '../geometry/kdtree'

@@ -6,7 +6,7 @@
 
 import { Matrix4 } from 'three'
 
-import { Log } from '../globals'
+import { Log } from '../logger'
 import { EncodedSymOp, SymOpCode } from './symmetry-constants'
 
 const reInteger = /^[1-9]$/
@@ -55,7 +55,7 @@ export function getSymmetryOperations (spacegroup: string) {
         } else if (c === '/') {
           denominator = true
         } else if (c === 'X') {
-          me[ 0 + row ] = negate ? -1 : 1
+          me[ row ] = negate ? -1 : 1
         } else if (c === 'Y') {
           me[ 4 + row ] = negate ? -1 : 1
         } else if (c === 'Z') {

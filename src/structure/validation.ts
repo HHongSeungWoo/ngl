@@ -6,11 +6,11 @@
 
 import { Vector3, Color } from 'three'
 
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import { defaults } from '../utils'
 import { ClashPicker } from '../utils/picker'
 import { uniformArray3 } from '../math/array-utils'
-import { guessElement } from '../structure/structure-utils'
+import { guessElement } from './structure-utils'
 import AtomProxy from '../proxy/atom-proxy'
 import Structure from '../structure/structure'
 

@@ -48,7 +48,7 @@ export class Interpolator {
   }
 
   private interpolateToArr (v0: Vector3, v1: Vector3, v2: Vector3, v3: Vector3, t: number, arr: Float32Array, offset: number) {
-    arr[ offset + 0 ] = spline(v0.x, v1.x, v2.x, v3.x, t, this.tension)
+    arr[ offset ] = spline(v0.x, v1.x, v2.x, v3.x, t, this.tension)
     arr[ offset + 1 ] = spline(v0.y, v1.y, v2.y, v3.y, t, this.tension)
     arr[ offset + 2 ] = spline(v0.z, v1.z, v2.z, v3.z, t, this.tension)
   }

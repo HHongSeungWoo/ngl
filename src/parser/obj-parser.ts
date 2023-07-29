@@ -110,13 +110,13 @@ OBJLoader.prototype = {
         var src = this.vertices
         var dst = this.object.geometry.vertices
 
-        dst.push(src[ a + 0 ])
+        dst.push(src[ a ])
         dst.push(src[ a + 1 ])
         dst.push(src[ a + 2 ])
-        dst.push(src[ b + 0 ])
+        dst.push(src[ b ])
         dst.push(src[ b + 1 ])
         dst.push(src[ b + 2 ])
-        dst.push(src[ c + 0 ])
+        dst.push(src[ c ])
         dst.push(src[ c + 1 ])
         dst.push(src[ c + 2 ])
       },
@@ -125,7 +125,7 @@ OBJLoader.prototype = {
         var src = this.vertices
         var dst = this.object.geometry.vertices
 
-        dst.push(src[ a + 0 ])
+        dst.push(src[ a ])
         dst.push(src[ a + 1 ])
         dst.push(src[ a + 2 ])
       },
@@ -134,13 +134,13 @@ OBJLoader.prototype = {
         var src = this.normals
         var dst = this.object.geometry.normals
 
-        dst.push(src[ a + 0 ])
+        dst.push(src[ a ])
         dst.push(src[ a + 1 ])
         dst.push(src[ a + 2 ])
-        dst.push(src[ b + 0 ])
+        dst.push(src[ b ])
         dst.push(src[ b + 1 ])
         dst.push(src[ b + 2 ])
-        dst.push(src[ c + 0 ])
+        dst.push(src[ c ])
         dst.push(src[ c + 1 ])
         dst.push(src[ c + 2 ])
       },

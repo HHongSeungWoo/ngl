@@ -4,7 +4,7 @@
  * @private
  */
 
-import { Debug } from '../globals'
+import { Debug } from '../logger'
 
 if (typeof WebGLRenderingContext !== 'undefined') {
   const wrcp = WebGLRenderingContext.prototype

@@ -6,7 +6,7 @@
 
 import { Vector3 } from 'three'
 
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import _Kdtree from '../utils/kdtree'
 import Structure from '../structure/structure'
 import AtomProxy from '../proxy/atom-proxy'
@@ -40,7 +40,7 @@ class Kdtree {
     let i = 0
 
     structure.eachAtom(function (ap) {
-      points[ i + 0 ] = ap.x
+      points[ i ] = ap.x
       points[ i + 1 ] = ap.y
       points[ i + 2 ] = ap.z
       atomIndices[ i / 3 ] = ap.index

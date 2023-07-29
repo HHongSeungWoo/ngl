@@ -5,7 +5,7 @@
  */
 
 import { Matrix4 } from 'three'
-import { Debug, Log } from '../globals'
+import { Debug, Log } from '../logger'
 import {
     Matrix, svd, meanRows, subRows, transpose,
     multiplyABt, invert3x3, multiply3x3, mat3x3determinant, multiply
@@ -151,7 +151,7 @@ class Superposition {
     if (atoms instanceof Structure) {
       atoms.eachAtom(function (a) {
         if (i < d) {
-          cd[ i + 0 ] = a.x
+          cd[ i ] = a.x
           cd[ i + 1 ] = a.y
           cd[ i + 2 ] = a.z
           if (is4X4) cd[ i + 3 ] = 1

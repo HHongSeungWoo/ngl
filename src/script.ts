@@ -6,7 +6,7 @@
 
 import { Signal } from 'signals'
 
-import { Log } from './globals'
+import { Log } from './logger'
 import Stage from './stage/stage'
 
 export interface ScriptSignals {

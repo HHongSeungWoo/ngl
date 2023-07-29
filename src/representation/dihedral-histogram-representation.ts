@@ -506,7 +506,7 @@ function calculateDihedralHistogram(histogramData: HistogramData) {
     v3multiplyScalar(tmp, zeroDegreeVector, scalingFactor)
     v3multiplyScalar(tmp2, crossVector, scalingFactor)
     calcArcPoint(arcPoint, mid, tmp, tmp2, ind * histBinAngleStep)
-    v3toArray(arcPoint, out, startOffset + 1 * pointLength)
+    v3toArray(arcPoint, out, startOffset + pointLength)
     calcArcPoint(arcPoint, mid, tmp, tmp2, (ind + 1) * histBinAngleStep)
     v3toArray(arcPoint, out, startOffset + 2 * pointLength)
   }
@@ -515,7 +515,7 @@ function calculateDihedralHistogram(histogramData: HistogramData) {
     // Set Bond Arrows
 
     copyArray(mid, adjacentBondArrows.startPoints, 0, ind * pointLength, mid.length)
-    calcArcPoint(tmp, mid, zeroDegreeVector, crossVector, 0 + histBinAngleStep * 0)
+    calcArcPoint(tmp, mid, zeroDegreeVector, crossVector, 0)
     copyArray(tmp, adjacentBondArrows.endPoints, 0, ind * pointLength, mid.length)
 
     copyArray(mid, distantBondArrows.startPoints, 0, ind * pointLength, mid.length)
@@ -526,7 +526,7 @@ function calculateDihedralHistogram(histogramData: HistogramData) {
 
     for (let i = 0; i < histogram.length; i++) {
       copyArray(mid, binBorders.startPoints, 0, i * 3, mid.length)
-      calcArcPoint(tmp, mid, zeroDegreeVector, crossVector, 0 + histBinAngleStep * i)
+      calcArcPoint(tmp, mid, zeroDegreeVector, crossVector, histBinAngleStep * i)
       copyArray(tmp, binBorders.endPoints, 0, i * 3, tmp.length)
     }
 
@@ -544,7 +544,7 @@ function calculateDihedralHistogram(histogramData: HistogramData) {
     const startOffset = sectionIndex * pointsInTriangle * pointLength
     v3toArray(mid, opaqueMiddleDisc.triangles, startOffset)
     calcArcPoint(arcPoint, mid, inPlane1, cross1, sectionIndex * opaqueCircleSectorAngleStep)
-    v3toArray(arcPoint, opaqueMiddleDisc.triangles, startOffset + 1 * pointLength)
+    v3toArray(arcPoint, opaqueMiddleDisc.triangles, startOffset + pointLength)
     calcArcPoint(arcPoint, mid, inPlane1, cross1, (sectionIndex + 1) * opaqueCircleSectorAngleStep)
     v3toArray(arcPoint, opaqueMiddleDisc.triangles, startOffset + 2 * pointLength)
   }

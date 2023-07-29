@@ -97,7 +97,7 @@ class FilteredVolume {
 
           filteredData[ j ] = v
 
-          filteredPosition[ j3 + 0 ] = position[ i3 + 0 ]
+          filteredPosition[ j3 ] = position[ i3 ]
           filteredPosition[ j3 + 1 ] = position[ i3 + 1 ]
           filteredPosition[ j3 + 2 ] = position[ i3 + 2 ]
 

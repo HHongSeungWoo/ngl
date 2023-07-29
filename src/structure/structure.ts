@@ -977,7 +977,7 @@ class Structure implements Structure{
     const cd = coords.data
 
     this.eachAtom(a => {
-      cd[ i + 0 ] = a.x
+      cd[ i ] = a.x
       cd[ i + 1 ] = a.y
       cd[ i + 2 ] = a.z
       i += 3

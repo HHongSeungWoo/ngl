@@ -261,7 +261,7 @@ class PdbParser extends StructureParser {
           if (asTrajectory) {
             const j = currentCoord * 3
 
-            currentFrame[ j + 0 ] = x
+            currentFrame[ j ] = x
             currentFrame[ j + 1 ] = y
             currentFrame[ j + 2 ] = z
 
@@ -511,8 +511,8 @@ class PdbParser extends StructureParser {
 
             const biomtElms = currentMatrix.elements
 
-            biomtElms[ 4 * 0 + row ] = parseFloat(biomt[ 4 ])
-            biomtElms[ 4 * 1 + row ] = parseFloat(biomt[ 5 ])
+            biomtElms[ 0 + row ] = parseFloat(biomt[ 4 ])
+            biomtElms[ 4 + row ] = parseFloat(biomt[ 5 ])
             biomtElms[ 4 * 2 + row ] = parseFloat(biomt[ 6 ])
             biomtElms[ 4 * 3 + row ] = parseFloat(biomt[ 7 ])
           } else if (
@@ -566,8 +566,8 @@ class PdbParser extends StructureParser {
 
           const ncsElms = currentMatrix.elements
 
-          ncsElms[ 4 * 0 + ncsRow ] = parseFloat(ncs[ 2 ])
-          ncsElms[ 4 * 1 + ncsRow ] = parseFloat(ncs[ 3 ])
+          ncsElms[ 0 + ncsRow ] = parseFloat(ncs[ 2 ])
+          ncsElms[ 4 + ncsRow ] = parseFloat(ncs[ 3 ])
           ncsElms[ 4 * 2 + ncsRow ] = parseFloat(ncs[ 4 ])
           ncsElms[ 4 * 3 + ncsRow ] = parseFloat(ncs[ 5 ])
         } else if (line.substr(0, 5) === 'ORIGX') {
@@ -579,8 +579,8 @@ class PdbParser extends StructureParser {
           const origxRow = parseInt(line[ 5 ]) - 1
           const origxElms = unitcellDict.origx.elements
 
-          origxElms[ 4 * 0 + origxRow ] = parseFloat(orgix[ 1 ])
-          origxElms[ 4 * 1 + origxRow ] = parseFloat(orgix[ 2 ])
+          origxElms[ 0 + origxRow ] = parseFloat(orgix[ 1 ])
+          origxElms[ 4 + origxRow ] = parseFloat(orgix[ 2 ])
           origxElms[ 4 * 2 + origxRow ] = parseFloat(orgix[ 3 ])
           origxElms[ 4 * 3 + origxRow ] = parseFloat(orgix[ 4 ])
         } else if (line.substr(0, 5) === 'SCALE') {
@@ -592,8 +592,8 @@ class PdbParser extends StructureParser {
           const scaleRow = parseInt(line[ 5 ]) - 1
           const scaleElms = unitcellDict.scale.elements
 
-          scaleElms[ 4 * 0 + scaleRow ] = parseFloat(scale[ 1 ])
-          scaleElms[ 4 * 1 + scaleRow ] = parseFloat(scale[ 2 ])
+          scaleElms[ 0 + scaleRow ] = parseFloat(scale[ 1 ])
+          scaleElms[ 4 + scaleRow ] = parseFloat(scale[ 2 ])
           scaleElms[ 4 * 2 + scaleRow ] = parseFloat(scale[ 3 ])
           scaleElms[ 4 * 3 + scaleRow ] = parseFloat(scale[ 4 ])
         } else if (recordName === 'CRYST1') {

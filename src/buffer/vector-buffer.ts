@@ -80,10 +80,10 @@ class VectorBuffer extends Buffer {
         const i = v * 2 * 3
         const j = v * 3
 
-        aPosition[ i + 0 ] = position[ j + 0 ]
+        aPosition[ i ] = position[ j ]
         aPosition[ i + 1 ] = position[ j + 1 ]
         aPosition[ i + 2 ] = position[ j + 2 ]
-        aPosition[ i + 3 ] = position[ j + 0 ] + vector[ j + 0 ] * scale
+        aPosition[ i + 3 ] = position[ j ] + vector[ j ] * scale
         aPosition[ i + 4 ] = position[ j + 1 ] + vector[ j + 1 ] * scale
         aPosition[ i + 5 ] = position[ j + 2 ] + vector[ j + 2 ] * scale
       }

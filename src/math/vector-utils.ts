@@ -70,7 +70,7 @@ export function calculateMeanVector3 (array: NumberArray) {
   let z = 0
 
   for (let i = 0; i < n; i += 3) {
-    x += array[ i + 0 ]
+    x += array[ i ]
     y += array[ i + 1 ]
     z += array[ i + 2 ]
   }

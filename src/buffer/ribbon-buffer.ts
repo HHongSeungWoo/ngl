@@ -10,7 +10,7 @@ import { getUintArray } from '../utils'
 import { serialArray } from '../math/array-utils'
 import MeshBuffer from './mesh-buffer'
 import { BufferParameters, BufferData } from './buffer'
-import {Log} from "../globals";
+import {Log} from "../logger";
 
 const quadIndices = new Uint16Array([
   0, 1, 2,

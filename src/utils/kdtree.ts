@@ -152,7 +152,7 @@ class Kdtree {
       const dimension = this.getNodeDepth(nodeIndex) % 3
       const pointIndex = indices[ nodes[ nodeIndex ] ] * 3
       const ownPoint = [
-        points[ pointIndex + 0 ],
+        points[ pointIndex ],
         points[ pointIndex + 1 ],
         points[ pointIndex + 2 ]
       ]

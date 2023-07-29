@@ -11,7 +11,7 @@ import { defaults, getUintArray } from '../utils'
 import { serialArray } from '../math/array-utils'
 import MeshBuffer from './mesh-buffer'
 import { BufferDefaultParameters, BufferData, BufferParameters } from './buffer'
-import {Log} from "../globals";
+import {Log} from "../logger";
 
 const vTangent = new Vector3()
 const vMeshNormal = new Vector3()
@@ -252,7 +252,7 @@ class TubeMeshBuffer extends MeshBuffer {
       }
 
       if (primitiveId) {
-        meshPrimitiveId[ n * radialSegments + j ] = meshPrimitiveId[ 0 + j ]
+        meshPrimitiveId[ n * radialSegments + j ] = meshPrimitiveId[ j ]
       }
     }
 
@@ -340,13 +340,13 @@ class TubeMeshBuffer extends MeshBuffer {
 
     for (let j = 0; j < strip.length - 2; ++j) {
       if (j % 2 === 0) {
-        meshIndex[ l + j * 3 + 0 ] = k + strip[ j + 0 ]
+        meshIndex[ l + j * 3 ] = k + strip[ j ]
         meshIndex[ l + j * 3 + 1 ] = k + strip[ j + 1 ]
         meshIndex[ l + j * 3 + 2 ] = k + strip[ j + 2 ]
       } else {
-        meshIndex[ l + j * 3 + 0 ] = k + strip[ j + 2 ]
+        meshIndex[ l + j * 3 ] = k + strip[ j + 2 ]
         meshIndex[ l + j * 3 + 1 ] = k + strip[ j + 1 ]
-        meshIndex[ l + j * 3 + 2 ] = k + strip[ j + 0 ]
+        meshIndex[ l + j * 3 + 2 ] = k + strip[ j ]
       }
     }
 
@@ -357,13 +357,13 @@ class TubeMeshBuffer extends MeshBuffer {
 
     for (let j = 0; j < strip.length - 2; ++j) {
       if (j % 2 === 0) {
-        meshIndex[ l + j * 3 + 0 ] = k + strip[ j + 0 ]
+        meshIndex[ l + j * 3 ] = k + strip[ j ]
         meshIndex[ l + j * 3 + 1 ] = k + strip[ j + 1 ]
         meshIndex[ l + j * 3 + 2 ] = k + strip[ j + 2 ]
       } else {
-        meshIndex[ l + j * 3 + 0 ] = k + strip[ j + 2 ]
+        meshIndex[ l + j * 3 ] = k + strip[ j + 2 ]
         meshIndex[ l + j * 3 + 1 ] = k + strip[ j + 1 ]
-        meshIndex[ l + j * 3 + 2 ] = k + strip[ j + 0 ]
+        meshIndex[ l + j * 3 + 2 ] = k + strip[ j ]
       }
     }
   }

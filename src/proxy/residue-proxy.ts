@@ -272,7 +272,7 @@ class ResidueProxy {
    * @return {Array|TypedArray} target array
    */
   positionToArray (array: NumberArray = [], offset = 0) {
-    array[ offset + 0 ] = this.x
+    array[ offset ] = this.x
     array[ offset + 1 ] = this.y
     array[ offset + 2 ] = this.z
 

@@ -12,7 +12,7 @@ import { serialBlockArray } from '../math/array-utils'
 import { applyMatrix3toVector3array, applyMatrix4toVector3array } from '../math/vector-utils'
 import MeshBuffer from './mesh-buffer'
 import { BufferParameters, BufferData } from './buffer'
-import {Log} from "../globals";
+import {Log} from "../logger";
 
 const matrix = new Matrix4()
 const normalMatrix = new Matrix3()

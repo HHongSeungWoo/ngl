@@ -170,7 +170,7 @@ class DistanceRepresentation extends MeasurementRepresentation {
       }
 
       var i3 = i * 3
-      position[ i3 + 0 ] = (ap1.x + ap2.x) / 2
+      position[ i3 ] = (ap1.x + ap2.x) / 2
       position[ i3 + 1 ] = (ap1.y + ap2.y) / 2
       position[ i3 + 2 ] = (ap1.z + ap2.z) / 2
     })

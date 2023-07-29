@@ -591,7 +591,7 @@ function isRingAromatic (ring: AtomProxy[]) {
   const cd = coords.data
 
   ring.forEach(a => {
-    cd[ i + 0 ] = a.x
+    cd[ i ] = a.x
     cd[ i + 1 ] = a.y
     cd[ i + 2 ] = a.z
     i += 3

@@ -145,7 +145,8 @@ import Volume from './surface/volume'
 
 //
 
-import './utils/gzip-decompressor'
+
+export {gzipDecompress} from "./utils/gzip-decompressor"
 
 //
 

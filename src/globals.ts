@@ -68,6 +68,7 @@ export const WebglErrorMessage = '<div style="display:flex;align-items:center;ju
 export const WorkerRegistry = new _WorkerRegistry()
 export const ColormakerRegistry = new _ColormakerRegistry()
 export const DatasourceRegistry = new Registry('datasource')
+// TODO
 export const RepresentationRegistry = new Registry('representatation')
 export const ParserRegistry = new _ParserRegistry()
 export const ShaderRegistry = new Registry('shader')

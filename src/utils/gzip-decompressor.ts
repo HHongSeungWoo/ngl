@@ -6,9 +6,8 @@
 
 import { ungzip } from '../../lib/pako_inflate.es6'
 
-import { DecompressorRegistry } from '../globals'
 
-function gzipDecompress (data: ArrayBuffer|Uint8Array) {
+export function gzipDecompress (data: ArrayBuffer|Uint8Array) {
   let decompressedData
 
   if (data instanceof ArrayBuffer) {
@@ -24,4 +23,3 @@ function gzipDecompress (data: ArrayBuffer|Uint8Array) {
   return decompressedData
 }
 
-DecompressorRegistry.add('gz', gzipDecompress)

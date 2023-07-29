@@ -46,16 +46,7 @@ function glsl () {
   }
 }
 
-function text () {
-  return {
-    name: 'text',
-    transform: function (code, id) {
-      if (!/\.(txt)$/.test(id)) return
-      code = 'export default ' + JSON.stringify(code) + ';'
-      return { code: code, map: { mappings: '' } }
-    }
-  }
-}
+
 
 export const plugins = [
   typescript({ sourceMap: true, inlineSources: true }),
@@ -65,7 +56,6 @@ export const plugins = [
   }),
   commonjs(),
   glsl(),
-  text(),
   json(),
 ]
 

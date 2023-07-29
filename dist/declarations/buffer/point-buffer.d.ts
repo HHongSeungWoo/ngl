@@ -89,6 +89,12 @@ declare class PointBuffer extends Buffer {
         depthWrite: {
             property: boolean;
         };
+        /**
+         * @param  {Object} data - attribute object
+         * @param  {Float32Array} data.position - positions
+         * @param  {Float32Array} data.color - colors
+         * @param  {BufferParameters} params - parameter object
+         */
         clipNear: {
             updateShader: boolean;
             property: boolean;

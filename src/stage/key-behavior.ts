@@ -4,12 +4,11 @@
  * @private
  */
 
-import { SupportsPassiveEventHandler } from '../globals'
 import Stage from './stage'
 import Viewer from '../viewer/viewer'
 import KeyControls from '../controls/key-controls'
 
-const passive = SupportsPassiveEventHandler ? { passive: true } : false
+const passive = { passive: true }
 
 class KeyBehavior {
   viewer: Viewer

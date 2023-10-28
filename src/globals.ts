@@ -18,20 +18,6 @@ import { MeasurementRepresentationParameters } from './representation/measuremen
 export const Browser = getBrowser()
 
 /**
- * Flag indicating support for the 'passive' option for event handler
- */
-export let SupportsPassiveEventHandler = false
-try {
-  // Test via a getter in the options object to see if the passive property is accessed
-  const opts = Object.defineProperty({}, 'passive', {
-    get: function () {
-      SupportsPassiveEventHandler = true
-    }
-  })
-  window.addEventListener('test', e => {}, opts)
-} catch (e) {}
-
-/**
  * Flag indicating a mobile browser
  */
 export const Mobile = typeof window !== 'undefined' ? typeof window.orientation !== 'undefined' : false

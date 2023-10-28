@@ -82,7 +82,7 @@ interface Structure {
     _rp: ResidueProxy;
     _cp: ChainProxy;
 }
-export declare type StructureHeader = {
+export type StructureHeader = {
     releaseDate?: string;
     depositionDate?: string;
     resolution?: number;
@@ -90,11 +90,11 @@ export declare type StructureHeader = {
     rWork?: number;
     experimentalMethods?: string[];
 };
-export declare type StructureExtraData = {
+export type StructureExtraData = {
     cif?: object;
     sdf?: object[];
 };
-export declare type StructureSignals = {
+export type StructureSignals = {
     refreshed: Signal;
 };
 /**

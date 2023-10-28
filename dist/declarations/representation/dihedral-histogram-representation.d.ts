@@ -8,7 +8,7 @@ import StructureRepresentation, { StructureRepresentationParameters } from './st
 import { Structure } from '../ngl';
 import StructureView from '../structure/structure-view';
 import Viewer from '../viewer/viewer';
-declare type ColorDefinition = Color | string | number | undefined;
+type ColorDefinition = Color | string | number | undefined;
 interface HistogramColorParameters {
     histogramBinBorderColor: ColorDefinition;
     adjacentBondArrowColor: ColorDefinition;

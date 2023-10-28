@@ -8,7 +8,7 @@ import Stage from '../stage/stage';
 import Surface from '../surface/surface';
 import { Vector3, Box3 } from 'three';
 import RepresentationElement from './representation-element';
-export declare type SurfaceRepresentationType = 'surface' | 'dot';
+export type SurfaceRepresentationType = 'surface' | 'dot';
 /**
  * Component wrapping a {@link Surface} object
  *

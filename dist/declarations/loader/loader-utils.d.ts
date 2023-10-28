@@ -13,7 +13,7 @@ export interface LoaderParameters {
     path: string;
     protocol: string;
 }
-export declare type LoaderInput = File | Blob | string;
+export type LoaderInput = File | Blob | string;
 export declare function getFileInfo(file: LoaderInput): {
     path: string;
     name: string;

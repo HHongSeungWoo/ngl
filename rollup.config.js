@@ -74,13 +74,6 @@ const moduleConfig = {
   plugins,
   output: [
     {
-      file: 'build/js/ngl.umd.js',
-      format: 'umd',
-      name: 'NGL',
-      sourcemap: true,
-      globals: umdGlobals
-    },
-    {
       file: 'build/js/ngl.esm.js',
       format: 'es',
       name: 'NGL',
@@ -91,20 +84,6 @@ const moduleConfig = {
   external: moduleExternals
 }
 
-// this version has three.js and everything else built in
-const bundleConfig = {
-  input: 'src/ngl.ts',
-  plugins: [...plugins],
-  output: {
-    file: 'build/js/ngl.dev.js',
-    format: 'umd',
-    name: 'NGL',
-    sourcemap: true,
-    globals: {}
-  },
-  external: []
-}
-
 export default [
-  moduleConfig, bundleConfig
+  moduleConfig
 ]

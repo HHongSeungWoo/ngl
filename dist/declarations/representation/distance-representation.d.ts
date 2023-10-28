@@ -36,7 +36,7 @@ export interface DistanceRepresentationParameters extends MeasurementRepresentat
     atomPair: AtomPair;
     useCylinder: boolean;
 }
-export declare type AtomPair = (number | string)[][];
+export type AtomPair = (number | string)[][];
 /**
  * Distance representation
  */

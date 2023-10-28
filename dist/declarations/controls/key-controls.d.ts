@@ -5,7 +5,7 @@
  */
 import { KeyActionPresets, KeyActionCallback } from './key-actions';
 import Stage from '../stage/stage';
-export declare type KeyControlPreset = keyof typeof KeyActionPresets;
+export type KeyControlPreset = keyof typeof KeyActionPresets;
 export interface KeyControlsParams {
     preset?: KeyControlPreset;
     disabled?: boolean;

@@ -40,7 +40,7 @@ export declare const HyperballStickImpostorBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type HyperballStickImpostorBufferParameters = BufferParameters & {
+export type HyperballStickImpostorBufferParameters = BufferParameters & {
     shrink: number;
 };
 /**

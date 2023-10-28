@@ -33,7 +33,7 @@ export declare const TrajectoryElementDefaultParameters: {
     name: string;
     status: string;
 };
-export declare type TrajectoryElementParameters = typeof TrajectoryElementDefaultParameters;
+export type TrajectoryElementParameters = typeof TrajectoryElementDefaultParameters;
 export interface TrajectoryElementSignals extends ElementSignals {
     frameChanged: Signal;
     playerChanged: Signal;

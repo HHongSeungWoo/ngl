@@ -11,7 +11,7 @@ export declare const EntityTypeString: {
     macrolide: number;
     water: number;
 };
-export declare type EntityTypeString = keyof typeof EntityTypeString;
+export type EntityTypeString = keyof typeof EntityTypeString;
 /**
  * Entity of a {@link Structure}
  */

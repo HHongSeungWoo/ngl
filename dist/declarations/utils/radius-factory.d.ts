@@ -14,7 +14,7 @@ export declare const RadiusFactoryTypes: {
     data: string;
     explicit: string;
 };
-export declare type RadiusType = keyof typeof RadiusFactoryTypes;
+export type RadiusType = keyof typeof RadiusFactoryTypes;
 export interface RadiusParams {
     type?: RadiusType;
     scale?: number;

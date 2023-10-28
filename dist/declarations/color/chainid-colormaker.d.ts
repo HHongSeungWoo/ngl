@@ -5,7 +5,7 @@
  */
 import Colormaker, { StuctureColormakerParams, ColormakerScale } from './colormaker';
 import AtomProxy from '../proxy/atom-proxy';
-export declare type ChainidDict = {
+export type ChainidDict = {
     [k: string]: number;
 };
 /**

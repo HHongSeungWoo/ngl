@@ -4,7 +4,7 @@
  * @private
  */
 import { Box3 } from 'three';
-export declare type Positions = {
+export type Positions = {
     x: ArrayLike<number>;
     y: ArrayLike<number>;
     z: ArrayLike<number>;

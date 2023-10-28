@@ -5,10 +5,10 @@
  */
 import PickingProxy from './picking-proxy';
 import Stage from '../stage/stage';
-export declare type ScrollCallback = (stage: Stage, delta: number) => void;
-export declare type DragCallback = (stage: Stage, dx: number, dy: number) => void;
-export declare type PickCallback = (stage: Stage, pickingProxy: PickingProxy) => void;
-export declare type MouseActionCallback = ScrollCallback | DragCallback | PickCallback;
+export type ScrollCallback = (stage: Stage, delta: number) => void;
+export type DragCallback = (stage: Stage, dx: number, dy: number) => void;
+export type PickCallback = (stage: Stage, pickingProxy: PickingProxy) => void;
+export type MouseActionCallback = ScrollCallback | DragCallback | PickCallback;
 /**
  * Mouse actions provided as static methods
  */
@@ -130,7 +130,7 @@ declare class MouseActions {
     static tooltipPick(stage: Stage, pickingProxy: PickingProxy): void;
     static measurePick(stage: Stage, pickingProxy: PickingProxy): void;
 }
-declare type MouseActionPreset = [string, MouseActionCallback][];
+type MouseActionPreset = [string, MouseActionCallback][];
 export declare const MouseActionPresets: {
     default: MouseActionPreset;
     pymol: MouseActionPreset;

@@ -43,7 +43,7 @@ export declare const ArrowBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type ArrowBufferParameters = typeof ArrowBufferDefaultParameters;
+export type ArrowBufferParameters = typeof ArrowBufferDefaultParameters;
 /**
  * Arrow buffer. Draws arrows made from a cylinder and a cone.
  * @implements {Buffer}

@@ -7,14 +7,14 @@ import { Vector3, Matrix4, BufferGeometry, Uniform, Group, LineSegments, Points,
 import { GenericColor, NumberArray } from '../types';
 import { ShaderDefines } from '../shader/shader-utils';
 import { Picker } from '../utils/picker';
-export declare type BufferSide = 'front' | 'back' | 'double';
-export declare type BufferTypes = 'picking' | 'background';
-export declare type BufferMaterials = 'material' | 'wireframeMaterial' | 'pickingMaterial';
+export type BufferSide = 'front' | 'back' | 'double';
+export type BufferTypes = 'picking' | 'background';
+export type BufferMaterials = 'material' | 'wireframeMaterial' | 'pickingMaterial';
 export interface _BufferAttribute {
     type: 'f' | 'v2' | 'v3' | 'c';
     value?: NumberArray;
 }
-export declare type Uniforms = {
+export type Uniforms = {
     [k: string]: Uniform | {
         value: any;
     };
@@ -42,7 +42,7 @@ export declare const BufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type BufferParameters = Omit<typeof BufferDefaultParameters, 'diffuse' | 'interiorColor'> & {
+export type BufferParameters = Omit<typeof BufferDefaultParameters, 'diffuse' | 'interiorColor'> & {
     diffuse: GenericColor;
     interiorColor: GenericColor;
 };

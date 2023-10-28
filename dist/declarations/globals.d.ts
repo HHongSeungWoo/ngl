@@ -9,15 +9,6 @@ import _ParserRegistry from './parser/parser-registry';
 import _WorkerRegistry from './worker/worker-registry';
 import { MeasurementRepresentationParameters } from './representation/measurement-representation';
 /**
- * The browser name: "Opera", "Chrome", "Firefox", "Mobile Safari",
- * "Internet Explorer", "Safari" or false.
- */
-export declare const Browser: string | boolean;
-/**
- * Flag indicating support for the 'passive' option for event handler
- */
-export declare let SupportsPassiveEventHandler: boolean;
-/**
  * Flag indicating a mobile browser
  */
 export declare const Mobile: boolean;

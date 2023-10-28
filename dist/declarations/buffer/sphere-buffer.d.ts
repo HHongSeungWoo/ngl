@@ -37,7 +37,7 @@ export declare const SphereBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type SphereBufferParameters = SphereGeometryBufferParameters & {
+export type SphereBufferParameters = SphereGeometryBufferParameters & {
     disableImpostor: boolean;
 };
 /**
@@ -56,5 +56,5 @@ export declare type SphereBufferParameters = SphereGeometryBufferParameters & {
 declare const SphereBuffer: {
     new (data: SphereBufferData, params: SphereBufferParameters): SphereGeometryBuffer | SphereImpostorBuffer;
 };
-declare type SphereBuffer = SphereGeometryBuffer | SphereImpostorBuffer;
+type SphereBuffer = SphereGeometryBuffer | SphereImpostorBuffer;
 export default SphereBuffer;

@@ -37,7 +37,7 @@ export declare const VectorBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type VectorBufferParameters = BufferParameters & {
+export type VectorBufferParameters = BufferParameters & {
     scale: number;
     color: GenericColor;
 };

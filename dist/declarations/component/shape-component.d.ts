@@ -8,7 +8,7 @@ import Stage from '../stage/stage';
 import Shape from '../geometry/shape';
 import { Vector3, Box3 } from 'three';
 import RepresentationElement from './representation-element';
-export declare type ShapeRepresentationType = 'buffer';
+export type ShapeRepresentationType = 'buffer';
 /**
  * Component wrapping a {@link Shape} object
  *

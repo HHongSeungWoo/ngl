@@ -21,12 +21,5 @@ declare abstract class Writer {
      * @return {Blob} the blob
      */
     getBlob(): Blob;
-    /**
-     * Trigger a download of the
-     * @param  {[type]} name [description]
-     * @param  {[type]} ext  [description]
-     * @return {[type]}      [description]
-     */
-    download(name?: string, ext?: string): void;
 }
 export default Writer;

@@ -32,7 +32,7 @@ export declare const SphereGeometryBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type SphereGeometryBufferParameters = BufferParameters & {
+export type SphereGeometryBufferParameters = BufferParameters & {
     sphereDetail: number;
 };
 /**

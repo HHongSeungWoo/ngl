@@ -27,7 +27,7 @@ export declare function calculateBonds(structure: Structure, inferBonds?: InferB
  * If `auto`, any hetgroup residue with at least one CONECT record will
  * not have bonding inferred, and will rely on the CONECT records
  */
-export declare type InferBondsOptions = 'all' | 'none' | 'auto';
+export type InferBondsOptions = 'all' | 'none' | 'auto';
 export interface ResidueBonds {
     atomIndices1: number[];
     atomIndices2: number[];

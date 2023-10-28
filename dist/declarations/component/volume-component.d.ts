@@ -8,7 +8,7 @@ import Stage from '../stage/stage';
 import Volume from '../surface/volume';
 import { Box3, Vector3 } from 'three';
 import RepresentationElement from './representation-element';
-export declare type VolumeRepresentationType = 'surface' | 'slice' | 'dot';
+export type VolumeRepresentationType = 'surface' | 'slice' | 'dot';
 /**
  * Component wrapping a {@link Volume} object
  *

@@ -9,7 +9,7 @@ import Volume from '../surface/volume';
 import Surface from '../surface/surface';
 import Viewer from '../viewer/viewer';
 import { ColormakerParameters } from '../color/colormaker';
-export declare type SurfaceDataFields = {
+export type SurfaceDataFields = {
     position: boolean;
     color: boolean;
     index: boolean;

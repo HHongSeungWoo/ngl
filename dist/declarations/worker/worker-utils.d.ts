@@ -3,7 +3,7 @@
  * @author Alexander Rose <alexander.rose@weirdbyte.de>
  * @private
  */
-export declare type FunctionWithDeps = {
+export type FunctionWithDeps = {
     __deps?: Function[];
 } & Function;
 export interface WorkerEvent {

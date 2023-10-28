@@ -64,7 +64,7 @@ interface MeshData {
 }
 
 function createUpdatedObject(o: Object, updateSource: Object) {
-  function hasKey<O>(obj: O, key: keyof any): key is keyof O {
+  function hasKey<O extends object>(obj: O, key: keyof any): key is keyof O {
     return key in obj
   }
 

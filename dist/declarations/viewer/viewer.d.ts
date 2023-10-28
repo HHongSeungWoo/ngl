@@ -12,8 +12,8 @@ import '../shader/Quad.frag';
 import Stats from './stats';
 import { ImageParameters } from './viewer-utils';
 import Buffer from '../buffer/buffer';
-export declare type CameraType = 'perspective' | 'orthographic' | 'stereo';
-export declare type ColorWorkflow = 'linear' | 'sRGB';
+export type CameraType = 'perspective' | 'orthographic' | 'stereo';
+export type ColorWorkflow = 'linear' | 'sRGB';
 export interface ViewerSignals {
     ticked: Signal;
     rendered: Signal;

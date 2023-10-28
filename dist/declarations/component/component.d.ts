@@ -15,7 +15,7 @@ export declare const ComponentDefaultParameters: {
     status: string;
     visible: boolean;
 };
-export declare type ComponentParameters = typeof ComponentDefaultParameters;
+export type ComponentParameters = typeof ComponentDefaultParameters;
 export interface ComponentSignals {
     representationAdded: Signal;
     representationRemoved: Signal;

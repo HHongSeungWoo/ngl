@@ -8,7 +8,7 @@ import '../shader/Image.vert';
 import '../shader/Image.frag';
 import { Picker } from '../utils/picker';
 import Buffer, { BufferTypes } from './buffer';
-declare type ImageFilterTypes = 'nearest' | 'linear' | 'cubic-bspline' | 'cubic-catmulrom' | 'cubic-mitchell';
+type ImageFilterTypes = 'nearest' | 'linear' | 'cubic-bspline' | 'cubic-catmulrom' | 'cubic-mitchell';
 export interface ImageBufferData {
     position: Float32Array;
     imageData: Uint8Array;
@@ -42,7 +42,7 @@ export declare const ImageBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type ImageBufferParameters = typeof ImageBufferDefaultParameters;
+export type ImageBufferParameters = typeof ImageBufferDefaultParameters;
 export declare const ImageBufferParameterTypes: {
     filter: {
         updateShader: boolean;

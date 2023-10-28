@@ -5,7 +5,7 @@
  */
 import { Box3 } from 'three';
 import Shape from './shape';
-export declare type PrimitiveFields = {
+export type PrimitiveFields = {
     [k: string]: string;
 };
 /**

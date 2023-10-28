@@ -4,7 +4,7 @@
  * @private
  */
 import { TypedArrayString } from '../utils';
-export declare type StoreField = [string, number, TypedArrayString];
+export type StoreField = [string, number, TypedArrayString];
 /**
  * Store base class
  * @interface

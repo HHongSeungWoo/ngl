@@ -9,9 +9,9 @@ import '../shader/SDFFont.frag';
 import MappedQuadBuffer from './mappedquad-buffer';
 import { BufferData, BufferTypes, BufferParameters } from './buffer';
 import { GenericColor } from '../types';
-declare type TextFonts = 'sans-serif' | 'monospace' | 'serif';
-declare type TextStyles = 'normal' | 'italic';
-declare type TextWeights = 'normal' | 'bold';
+type TextFonts = 'sans-serif' | 'monospace' | 'serif';
+type TextStyles = 'normal' | 'italic';
+type TextWeights = 'normal' | 'bold';
 export declare const TextAtlasDefaultParams: {
     font: TextFonts;
     size: number;
@@ -22,8 +22,8 @@ export declare const TextAtlasDefaultParams: {
     width: number;
     height: number;
 };
-export declare type TextAtlasParams = typeof TextAtlasDefaultParams;
-export declare type TextAtlasMap = {
+export type TextAtlasParams = typeof TextAtlasDefaultParams;
+export type TextAtlasMap = {
     x: number;
     y: number;
     w: number;
@@ -103,7 +103,7 @@ export interface TextBufferData extends BufferData {
     size: Float32Array;
     text: string[];
 }
-declare type TextAttachments = 'bottom-left' | 'bottom-center' | 'bottom-right' | 'middle-left' | 'middle-center' | 'middle-right' | 'top-left' | 'top-center' | 'top-right';
+type TextAttachments = 'bottom-left' | 'bottom-center' | 'bottom-right' | 'middle-left' | 'middle-center' | 'middle-right' | 'top-left' | 'top-center' | 'top-right';
 export declare const TextBufferDefaultParameters: {
     fontFamily: TextFonts;
     fontStyle: TextStyles;
@@ -145,7 +145,7 @@ export declare const TextBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type TextBufferParameters = BufferParameters & {
+export type TextBufferParameters = BufferParameters & {
     fontFamily: TextFonts;
     fontStyle: TextStyles;
     fontWeight: TextWeights;

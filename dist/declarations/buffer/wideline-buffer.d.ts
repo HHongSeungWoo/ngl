@@ -38,7 +38,7 @@ export declare const WideLineBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type WideLineBufferParameters = BufferParameters & {
+export type WideLineBufferParameters = BufferParameters & {
     linewidth: number;
 };
 /**

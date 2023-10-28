@@ -7,7 +7,7 @@ import Selection from '../selection/selection';
 import Colormaker, { ColormakerParameters } from './colormaker';
 import AtomProxy from '../proxy/atom-proxy';
 import Structure from '../structure/structure';
-export declare type SelectionSchemeData = [string, string, ColormakerParameters | undefined];
+export type SelectionSchemeData = [string, string, ColormakerParameters | undefined];
 /**
  * Color based on {@link Selection}
  */

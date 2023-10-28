@@ -5,7 +5,7 @@
  */
 import { Signal } from 'signals';
 import { SelectionTest, SelectionRule } from './selection-test';
-export declare type SelectionSignals = {
+export type SelectionSignals = {
     stringChanged: Signal;
 };
 /**

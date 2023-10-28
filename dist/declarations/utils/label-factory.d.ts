@@ -21,7 +21,7 @@ export declare const LabelFactoryTypes: {
     format: string;
     qualified: string;
 };
-export declare type LabelType = keyof typeof LabelFactoryTypes;
+export type LabelType = keyof typeof LabelFactoryTypes;
 declare class LabelFactory {
     readonly type: LabelType;
     readonly text: {

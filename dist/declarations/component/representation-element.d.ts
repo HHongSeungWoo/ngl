@@ -15,7 +15,7 @@ export declare const RepresentationElementDefaultParameters: {
     name: string;
     status: string;
 };
-export declare type RepresentationElementParameters = typeof RepresentationElementDefaultParameters;
+export type RepresentationElementParameters = typeof RepresentationElementDefaultParameters;
 export interface RepresentationElementSignals extends ElementSignals {
     visibilityChanged: Signal;
     parametersChanged: Signal;

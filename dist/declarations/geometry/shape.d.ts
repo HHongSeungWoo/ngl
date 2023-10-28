@@ -19,7 +19,7 @@ export declare const ShapeDefaultParameters: {
     useTexture: boolean;
     linewidth: number;
 };
-export declare type ShapeParameters = typeof ShapeDefaultParameters;
+export type ShapeParameters = typeof ShapeDefaultParameters;
 /**
  * Class for building custom shapes.
  *

@@ -73,7 +73,7 @@ declare class LineRepresentation extends StructureRepresentation {
             reverse: boolean;
         };
         radiusParams: {
-            type: "" | "data" | "size" | "explicit" | "vdw" | "covalent" | "sstruc" | "bfactor";
+            type: "" | "size" | "data" | "explicit" | "vdw" | "covalent" | "sstruc" | "bfactor";
             scale: number;
             size: number;
             data: {

@@ -20,7 +20,7 @@ export declare const ImageDefaultParameters: {
     transparent: boolean;
     onProgress: Function | undefined;
 };
-export declare type ImageParameters = typeof ImageDefaultParameters;
+export type ImageParameters = typeof ImageDefaultParameters;
 /**
  * Make image from what is shown in a viewer canvas
  * @param  {Viewer} viewer - the viewer

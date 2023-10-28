@@ -95,14 +95,14 @@ export declare const ContactDataDefaultParams: {
     radius: number;
     filterSele: string;
 };
-export declare type ContactDataParams = typeof ContactDataDefaultParams | {
+export type ContactDataParams = typeof ContactDataDefaultParams | {
     filterSele: string | [string, string];
 };
 export declare const ContactLabelDefaultParams: {
     unit: string;
     size: number;
 };
-export declare type ContactLabelParams = typeof ContactLabelDefaultParams;
+export type ContactLabelParams = typeof ContactLabelDefaultParams;
 export interface ContactData {
     position1: Float32Array;
     position2: Float32Array;

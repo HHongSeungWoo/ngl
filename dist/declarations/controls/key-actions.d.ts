@@ -4,7 +4,7 @@
  * @private
  */
 import Stage from '../stage/stage';
-export declare type KeyActionCallback = (stage: Stage) => void;
+export type KeyActionCallback = (stage: Stage) => void;
 /**
  * Key actions provided as static methods
  */
@@ -30,7 +30,7 @@ declare class KeyActions {
      */
     static toggleAntialiasing(stage: Stage): void;
 }
-declare type KeyActionPreset = [string, KeyActionCallback][];
+type KeyActionPreset = [string, KeyActionCallback][];
 export declare const KeyActionPresets: {
     default: KeyActionPreset;
 };

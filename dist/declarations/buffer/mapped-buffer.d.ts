@@ -4,7 +4,7 @@
  * @private
  */
 import Buffer, { BufferParameters, BufferData } from './buffer';
-export declare type MappingType = 'v2' | 'v3';
+export type MappingType = 'v2' | 'v3';
 /**
  * Mapped buffer. Sends mapping attribute to the GPU and repeats data in
  * others attributes. Used to render imposters.

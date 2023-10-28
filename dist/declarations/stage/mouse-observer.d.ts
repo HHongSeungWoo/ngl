@@ -7,7 +7,7 @@ import { Vector2 } from 'three';
 import { Signal } from 'signals';
 import Viewer from '../viewer/viewer';
 import MouseControls from '../controls/mouse-controls';
-declare type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
+type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 export interface MouseSignals {
     moved: Signal;
     scrolled: Signal;

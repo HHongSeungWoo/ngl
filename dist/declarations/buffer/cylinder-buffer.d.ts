@@ -43,7 +43,7 @@ export declare const CylinderBufferDefaultParameters: {
 } & {
     openEnded: boolean;
 };
-export declare type CylinderBufferParameters = (CylinderGeometryBufferParameters & {
+export type CylinderBufferParameters = (CylinderGeometryBufferParameters & {
     disableImpostor: boolean;
 }) | (CylinderImpostorBufferParameters & {
     disableImpostor: boolean;
@@ -66,5 +66,5 @@ export declare type CylinderBufferParameters = (CylinderGeometryBufferParameters
 declare const CylinderBuffer: {
     new (data: CylinderBufferData, params: Partial<CylinderBufferParameters>): CylinderGeometryBuffer | CylinderImpostorBuffer;
 };
-declare type CylinderBuffer = CylinderGeometryBuffer | CylinderImpostorBuffer;
+type CylinderBuffer = CylinderGeometryBuffer | CylinderImpostorBuffer;
 export default CylinderBuffer;

@@ -20,7 +20,7 @@ export interface VolumeSurface {
     };
 }
 export declare function VolumeSurface(this: VolumeSurface, data: NumberArray, nx: number, ny: number, nz: number, atomindex: NumberArray): void;
-export declare type VolumeSize = 'value' | 'abs-value' | 'value-min' | 'deviation';
+export type VolumeSize = 'value' | 'abs-value' | 'value-min' | 'deviation';
 /**
  * Volume
  */

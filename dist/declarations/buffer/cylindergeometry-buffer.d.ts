@@ -33,7 +33,7 @@ export declare const CylinderGeometryBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type CylinderGeometryBufferParameters = BufferParameters & {
+export type CylinderGeometryBufferParameters = BufferParameters & {
     radialSegments: number;
     openEnded: boolean;
 };

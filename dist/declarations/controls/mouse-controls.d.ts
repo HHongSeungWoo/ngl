@@ -6,12 +6,12 @@
 import { MouseActionPresets, MouseActionCallback } from './mouse-actions';
 import Stage from '../stage/stage';
 import MouseObserver from '../stage/mouse-observer';
-export declare type MouseControlPreset = keyof typeof MouseActionPresets;
+export type MouseControlPreset = keyof typeof MouseActionPresets;
 export interface MouseControlsParams {
     preset?: MouseControlPreset;
     disabled?: boolean;
 }
-export declare type MouseActionType = '' | 'scroll' | 'drag' | 'click' | 'doubleClick' | 'hover' | 'clickPick' | 'hoverPick';
+export type MouseActionType = '' | 'scroll' | 'drag' | 'click' | 'doubleClick' | 'hover' | 'clickPick' | 'hoverPick';
 export interface MouseAction {
     type: MouseActionType;
     key: number;

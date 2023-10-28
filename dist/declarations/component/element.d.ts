@@ -9,7 +9,7 @@ export declare const ElementDefaultParameters: {
     name: string;
     status: string;
 };
-export declare type ElementParameters = typeof ElementDefaultParameters;
+export type ElementParameters = typeof ElementDefaultParameters;
 export interface ElementSignals {
     statusChanged: Signal;
     nameChanged: Signal;

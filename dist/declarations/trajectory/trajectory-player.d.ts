@@ -5,9 +5,9 @@
  */
 import { Signal } from 'signals';
 import Trajectory from './trajectory';
-export declare type TrajectoryPlayerInterpolateType = '' | 'linear' | 'spline';
-export declare type TrajectoryPlayerMode = 'loop' | 'once';
-export declare type TrajectoryPlayerDirection = 'forward' | 'backward' | 'bounce';
+export type TrajectoryPlayerInterpolateType = '' | 'linear' | 'spline';
+export type TrajectoryPlayerMode = 'loop' | 'once';
+export type TrajectoryPlayerDirection = 'forward' | 'backward' | 'bounce';
 export declare const TrajectoryPlayerDefaultParameters: {
     step: number;
     timeout: number;
@@ -18,7 +18,7 @@ export declare const TrajectoryPlayerDefaultParameters: {
     mode: TrajectoryPlayerMode;
     direction: TrajectoryPlayerDirection;
 };
-export declare type TrajectoryPlayerParameters = typeof TrajectoryPlayerDefaultParameters;
+export type TrajectoryPlayerParameters = typeof TrajectoryPlayerDefaultParameters;
 export interface TrajectoryPlayerSignals {
     startedRunning: Signal;
     haltedRunning: Signal;

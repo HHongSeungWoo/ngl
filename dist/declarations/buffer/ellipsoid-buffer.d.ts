@@ -36,7 +36,7 @@ export declare const EllipsoidBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type EllipsoidBufferParameters = typeof EllipsoidBufferDefaultParameters;
+export type EllipsoidBufferParameters = typeof EllipsoidBufferDefaultParameters;
 /**
  * Ellipsoid buffer. Draws ellipsoids.
  *

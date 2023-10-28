@@ -11,8 +11,8 @@ import Surface from '../surface/surface';
 import Volume from '../surface/volume';
 import AtomProxy from '../proxy/atom-proxy';
 import BondProxy from '../proxy/bond-proxy';
-export declare type ColorMode = 'rgb' | 'hsv' | 'hsl' | 'hsi' | 'lab' | 'hcl';
-export declare type ColorSpace = 'sRGB' | 'linear';
+export type ColorMode = 'rgb' | 'hsv' | 'hsl' | 'hsi' | 'lab' | 'hcl';
+export type ColorSpace = 'sRGB' | 'linear';
 /** Set the global internal color space for colormakers */
 export declare function setColorSpace(space: ColorSpace): void;
 /** Get the global internal color space for colormakers */
@@ -24,7 +24,7 @@ export declare const ScaleDefaultParameters: {
     value: number;
     reverse: boolean;
 };
-export declare type ScaleParameters = typeof ScaleDefaultParameters;
+export type ScaleParameters = typeof ScaleDefaultParameters;
 export interface ColorData {
     atomData?: number[];
     bondData?: number[];
@@ -35,15 +35,15 @@ export interface ColormakerParameters extends ScaleParameters {
     surface?: Surface;
     data?: ColorData;
 }
-export declare type StuctureColormakerParams = {
+export type StuctureColormakerParams = {
     structure: Structure;
 } & Partial<ColormakerParameters>;
-export declare type VolumeColormakerParams = {
+export type VolumeColormakerParams = {
     volume: Volume;
 } & Partial<ColormakerParameters>;
-export declare type ColormakerScale = (v: number) => number;
+export type ColormakerScale = (v: number) => number;
 /** Decorator for optionally linearizing a numeric color */
-declare type colorFuncType = (value: any, fromTo?: boolean) => number;
+type colorFuncType = (value: any, fromTo?: boolean) => number;
 export declare function manageColor<T extends {
     parameters: ColormakerParameters;
 }>(_target: Object, _name: string | symbol, descriptor: TypedPropertyDescriptor<colorFuncType>): PropertyDescriptor;

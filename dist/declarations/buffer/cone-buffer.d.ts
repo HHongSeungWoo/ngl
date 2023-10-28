@@ -37,7 +37,7 @@ export declare const ConeBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type ConeBufferParameters = typeof ConeBufferDefaultParameters;
+export type ConeBufferParameters = typeof ConeBufferDefaultParameters;
 /**
  * Cone geometry buffer.
  *

@@ -5,7 +5,7 @@
  */
 import Structure from '../structure/structure';
 import Trajectory, { TrajectoryParameters } from './trajectory';
-declare type RequestCallback = (responseCallback: Function, i?: number, atomIndices?: number[][]) => void;
+type RequestCallback = (responseCallback: Function, i?: number, atomIndices?: number[][]) => void;
 /**
  * Callback trajectory class. Gets data from an JavaScript function.
  */

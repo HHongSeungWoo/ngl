@@ -84,7 +84,7 @@ export interface StageSignals {
     clicked: Signal;
     hovered: Signal;
 }
-export declare type RenderQualityType = 'auto' | 'low' | 'medium' | 'high';
+export type RenderQualityType = 'auto' | 'low' | 'medium' | 'high';
 export declare const StageDefaultParameters: {
     impostor: boolean;
     quality: RenderQualityType;
@@ -112,7 +112,7 @@ export declare const StageDefaultParameters: {
     tooltip: boolean;
     mousePreset: "default" | "pymol" | "coot" | "astexviewer";
 };
-export declare type StageParameters = typeof StageDefaultParameters;
+export type StageParameters = typeof StageDefaultParameters;
 export interface StageLoadFileParams extends LoaderParameters {
     defaultRepresentation: boolean;
     assembly: string;

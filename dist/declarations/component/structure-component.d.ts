@@ -36,7 +36,7 @@ import { UnitcellRepresentationParameters } from '../representation/unitcell-rep
 import { SliceRepresentationParameters } from '../representation/slice-representation';
 import { MolecularSurfaceRepresentationParameters } from '../representation/molecularsurface-representation';
 import { DotRepresentationParameters } from '../representation/dot-representation';
-export declare type StructureRepresentationType = keyof StructureRepresentationParametersMap;
+export type StructureRepresentationType = keyof StructureRepresentationParametersMap;
 interface StructureRepresentationParametersMap {
     'angle': AngleRepresentationParameters;
     'axes': AxesRepresentationParameters;
@@ -75,7 +75,7 @@ export declare const StructureComponentDefaultParameters: {
     status: string;
     visible: boolean;
 };
-export declare type StructureComponentParameters = typeof StructureComponentDefaultParameters;
+export type StructureComponentParameters = typeof StructureComponentDefaultParameters;
 export interface StructureComponentSignals extends ComponentSignals {
     trajectoryAdded: Signal;
     trajectoryRemoved: Signal;

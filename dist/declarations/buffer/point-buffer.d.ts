@@ -38,7 +38,7 @@ export declare const PointBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type PointBufferParameters = BufferParameters & {
+export type PointBufferParameters = BufferParameters & {
     pointSize: number;
     sizeAttenuation: boolean;
     sortParticles: boolean;

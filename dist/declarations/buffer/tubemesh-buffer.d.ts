@@ -48,7 +48,7 @@ export declare const TubeMeshBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type TubeMeshBufferParameters = BufferParameters & {
+export type TubeMeshBufferParameters = BufferParameters & {
     radialSegments: number;
     capped: boolean;
     aspectRatio: number;

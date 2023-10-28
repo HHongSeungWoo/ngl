@@ -7,9 +7,9 @@ import AtomProxy from '../proxy/atom-proxy';
 import ResidueProxy from '../proxy/residue-proxy';
 import ChainProxy from '../proxy/chain-proxy';
 import ModelProxy from '../proxy/model-proxy';
-export declare type ProxyEntity = AtomProxy | ResidueProxy | ChainProxy | ModelProxy;
-export declare type SelectionTest = false | ((e: ProxyEntity) => boolean | -1);
-export declare type SelectionOperator = 'AND' | 'OR';
+export type ProxyEntity = AtomProxy | ResidueProxy | ChainProxy | ModelProxy;
+export type SelectionTest = false | ((e: ProxyEntity) => boolean | -1);
+export type SelectionOperator = 'AND' | 'OR';
 export interface SelectionRule {
     keyword?: any;
     atomname?: string;

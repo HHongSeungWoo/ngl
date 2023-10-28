@@ -34,7 +34,7 @@ export declare const CylinderImpostorBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type CylinderImpostorBufferParameters = BufferParameters & {
+export type CylinderImpostorBufferParameters = BufferParameters & {
     openEnded: boolean;
 };
 /**

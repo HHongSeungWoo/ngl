@@ -38,7 +38,7 @@ export declare const TorusBufferDefaultParameters: {
     sortParticles: boolean;
     background: boolean;
 };
-export declare type TorusBufferParameters = typeof TorusBufferDefaultParameters;
+export type TorusBufferParameters = typeof TorusBufferDefaultParameters;
 /**
  * Torus geometry buffer. Draws torii.
  *

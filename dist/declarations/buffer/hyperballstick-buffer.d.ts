@@ -44,7 +44,7 @@ export declare const HyperballStickBufferDefaultParameters: {
 } & {
     shrink: number;
 };
-export declare type HyperballStickBufferParameters = HyperballStickImpostorBufferParameters & CylinderGeometryBufferParameters & {
+export type HyperballStickBufferParameters = HyperballStickImpostorBufferParameters & CylinderGeometryBufferParameters & {
     disableImpostor: boolean;
 };
 /**
@@ -66,5 +66,5 @@ export declare type HyperballStickBufferParameters = HyperballStickImpostorBuffe
 declare const HyperballStickBuffer: {
     new (data: HyperballStickBufferData, params: Partial<HyperballStickBufferParameters>): CylinderGeometryBuffer | HyperballStickImpostorBuffer;
 };
-declare type HyperballStickBuffer = CylinderGeometryBuffer | HyperballStickImpostorBuffer;
+type HyperballStickBuffer = CylinderGeometryBuffer | HyperballStickImpostorBuffer;
 export default HyperballStickBuffer;

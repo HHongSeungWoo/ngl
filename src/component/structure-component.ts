@@ -20,7 +20,6 @@ import { TrajectoryParameters } from '../trajectory/trajectory'
 import Selection from '../selection/selection'
 import Structure from '../structure/structure'
 import StructureView from '../structure/structure-view'
-import { superpose } from '../align/align-utils'
 import Stage from '../stage/stage'
 import StructureRepresentation, { StructureRepresentationParameters } from '../representation/structure-representation'
 import AtomProxy from '../proxy/atom-proxy'
@@ -362,9 +361,7 @@ class StructureComponent extends Component {
   }
 
   superpose (component: StructureComponent, align: boolean, sele1: string, sele2: string) {
-    superpose(
-      this.structureView, component.structureView, align, sele1, sele2
-    )
+    console.warn("10.28 removed")
 
     this.updateRepresentations({ 'position': true })
 

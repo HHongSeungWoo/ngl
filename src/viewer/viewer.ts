@@ -25,7 +25,7 @@ import '../shader/Quad.vert'
 import '../shader/Quad.frag'
 
 import {
-  Debug, Log, WebglErrorMessage, Browser,
+  Debug, Log, WebglErrorMessage,
   setExtensionFragDepth, SupportsReadPixelsFloat, setSupportsReadPixelsFloat
 } from '../globals'
 import { degToRad } from '../math/math-utils'
@@ -483,7 +483,6 @@ export default class Viewer {
 
     if (Debug) {
       console.log(JSON.stringify({
-        'Browser': Browser,
         'OES_texture_float': !!this.renderer.extensions.get('OES_texture_float'),
         'OES_texture_half_float': !!this.renderer.extensions.get('OES_texture_half_float'),
         'WEBGL_color_buffer_float': !!this.renderer.extensions.get('WEBGL_color_buffer_float'),

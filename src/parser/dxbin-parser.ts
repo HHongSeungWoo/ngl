@@ -5,8 +5,37 @@
  */
 
 import { Debug, Log, ParserRegistry } from '../globals'
-import { uint8ToLines, ensureBuffer } from '../utils'
+import { ensureBuffer, uint8ToString } from '../utils'
 import DxParser from './dx-parser'
+
+function uint8ToLines (u8a: Uint8Array, chunkSize = 1024 * 1024 * 10, newline = '\n') {
+  let partialLine = ''
+  let lines: string[] = []
+
+  for (let i = 0; i < u8a.length; i += chunkSize) {
+    const str = uint8ToString(u8a.subarray(i, i + chunkSize))
+    const idx = str.lastIndexOf(newline)
+
+    if (idx === -1) {
+      partialLine += str
+    } else {
+      const str2 = partialLine + str.substr(0, idx)
+      lines = lines.concat(str2.split(newline))
+
+      if (idx === str.length - newline.length) {
+        partialLine = ''
+      } else {
+        partialLine = str.substr(idx + newline.length)
+      }
+    }
+  }
+
+  if (partialLine !== '') {
+    lines.push(partialLine)
+  }
+
+  return lines
+}
 
 class DxbinParser extends DxParser {
   get type () { return 'dxbin' }

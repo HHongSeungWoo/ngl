@@ -4,18 +4,12 @@
  * @private
  */
 
-import { getBrowser, getQuery, boolean } from './utils'
+import { getQuery, boolean } from './utils'
 import Registry from './utils/registry'
 import _ColormakerRegistry from './color/colormaker-registry'
 import _ParserRegistry from './parser/parser-registry'
 import _WorkerRegistry from './worker/worker-registry'
 import { MeasurementRepresentationParameters } from './representation/measurement-representation';
-
-/**
- * The browser name: "Opera", "Chrome", "Firefox", "Mobile Safari",
- * "Internet Explorer", "Safari" or false.
- */
-export const Browser = getBrowser()
 
 /**
  * Flag indicating a mobile browser

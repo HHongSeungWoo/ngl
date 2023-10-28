@@ -37,10 +37,9 @@ import RepresentationElement from './component/representation-element'
 import Assembly from './symmetry/assembly'
 import TrajectoryPlayer from './trajectory/trajectory-player'
 import Superposition from './align/superposition'
-export { superpose } from './align/align-utils'
 export { guessElement, concatStructures } from './structure/structure-utils'
 
-export { flatten, throttle, download, getQuery, uniqueArray } from './utils'
+export { getQuery, uniqueArray } from './utils'
 import Queue from './utils/queue'
 import Counter from './utils/counter'
 import Frames from './trajectory/frames'
@@ -130,7 +129,6 @@ import WidelineBuffer from './buffer/wideline-buffer'
 
 import './parser/cif-parser'
 import './parser/gro-parser'
-import './parser/mmtf-parser'
 import './parser/mol2-parser'
 import './parser/pdb-parser'
 import './parser/pdbqt-parser'
@@ -155,11 +153,9 @@ import './parser/xplor-parser'
 
 import './parser/kin-parser'
 import './parser/obj-parser'
-import './parser/ply-parser'
 
 import './parser/csv-parser'
 import './parser/json-parser'
-import './parser/msgpack-parser'
 import './parser/netcdf-parser'
 import './parser/text-parser'
 import './parser/xml-parser'
@@ -174,19 +170,6 @@ import SpatialHash from './geometry/spatial-hash'
 import Structure from './structure/structure'
 import MolecularSurface from './surface/molecular-surface'
 import Volume from './surface/volume'
-
-//
-
-import './utils/gzip-decompressor'
-
-//
-
-import './datasource/rcsb-datasource'
-import './datasource/pubchem-datasource'
-import './datasource/passthrough-datasource'
-import './datasource/alphafold-datasource'
-import StaticDatasource from './datasource/static-datasource'
-import MdsrvDatasource from './datasource/mdsrv-datasource'
 
 //
 
@@ -217,8 +200,6 @@ import Version from './version'
 
 export {
   Version,
-  StaticDatasource,
-  MdsrvDatasource,
   Colormaker,
   Selection,
   PdbWriter,

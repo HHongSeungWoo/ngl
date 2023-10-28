@@ -52,51 +52,9 @@ export function updateParams<T> (params: T, newParams: {[k in keyof T]?: any}) {
   return params as T
 }
 
-export function pick (object: { [index: string]: any }) {
-  const properties = [].slice.call(arguments, 1)
-  return properties.reduce((a: { [index: string]: any }, e: any) => {
-    a[ e ] = object[ e ]
-    return a
-  }, {})
-}
-
-export function flatten (array: any[], ret: any[]) {
-  ret = defaults(ret, [])
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      flatten(array[i], ret)
-    } else {
-      ret.push(array[i])
-    }
-  }
-  return ret
-}
-
 export function getProtocol () {
   const protocol = window.location.protocol
   return protocol.match(/http(s)?:/gi) === null ? 'http:' : protocol
-}
-
-export function getBrowser () {
-  if (typeof window === 'undefined') return false
-
-  const ua = window.navigator.userAgent
-
-  if (/Opera|OPR/.test(ua)) {
-    return 'Opera'
-  } else if (/Chrome/i.test(ua)) {
-    return 'Chrome'
-  } else if (/Firefox/i.test(ua)) {
-    return 'Firefox'
-  } else if (/Mobile(\/.*)? Safari/i.test(ua)) {
-    return 'Mobile Safari'
-  } else if (/MSIE/i.test(ua)) {
-    return 'Internet Explorer'
-  } else if (/Safari/i.test(ua)) {
-    return 'Safari'
-  }
-
-  return false
 }
 
 export function getAbsolutePath (relativePath: string) {
@@ -107,200 +65,6 @@ export function getAbsolutePath (relativePath: string) {
   return loc.origin + basePath + relativePath
 }
 
-export function deepCopy (src: any) {
-  if (typeof src !== 'object') {
-    return src
-  }
-
-  const dst: { [index: string]: any } = Array.isArray(src) ? [] : {}
-
-  for (let key in src) {
-    dst[ key ] = deepCopy(src[ key ])
-  }
-
-  return dst
-}
-
-export function deepEqual(a: any, b: any) {
-  // from https://github.com/epoberezkin/fast-deep-equal MIT
-  if (a === b) return true;
-
-  const arrA = Array.isArray(a)
-  const arrB = Array.isArray(b)
-
-  if (arrA && arrB) {
-    if (a.length !== b.length) return false
-    for (let i = 0; i < a.length; i++) {
-      if (!deepEqual(a[i], b[i])) return false
-    }
-    return true
-  }
-
-  if (arrA !== arrB) return false
-
-  if (a && b && typeof a === 'object' && typeof b === 'object') {
-    const keys = Object.keys(a)
-    if (keys.length !== Object.keys(b).length) return false;
-
-    const dateA = a instanceof Date
-    const dateB = b instanceof Date
-    if (dateA && dateB) return a.getTime() === b.getTime()
-    if (dateA !== dateB) return false
-
-    const regexpA = a instanceof RegExp
-    const regexpB = b instanceof RegExp
-    if (regexpA && regexpB) return a.toString() === b.toString()
-    if (regexpA !== regexpB) return false
-
-    for (let i = 0; i < keys.length; i++) {
-      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false
-    }
-
-    for (let i = 0; i < keys.length; i++) {
-      if(!deepEqual(a[keys[i]], b[keys[i]])) return false
-    }
-
-    return true
-  }
-
-  return false
-}
-
-function openUrl (url: string) {
-  const opened = window.open(url, '_blank')
-  if (!opened) {
-    window.location.href = url
-  }
-}
-
-export function download (data: Blob|string, downloadName = 'download') {
-  // using ideas from https://github.com/eligrey/FileSaver.js/blob/master/FileSaver.js
-
-  if (!data) return
-
-  const isSafari = getBrowser() === 'Safari'
-  const isChromeIos = /CriOS\/[\d]+/.test(window.navigator.userAgent)
-
-  const a = document.createElement('a')
-
-  function open (str: string) {
-    openUrl(isChromeIos ? str : str.replace(/^data:[^;]*;/, 'data:attachment/file;'))
-  }
-
-  if (typeof navigator !== 'undefined' && (navigator as any).msSaveOrOpenBlob) {
-    // native saveAs in IE 10+
-    (navigator as any).msSaveOrOpenBlob(data, downloadName)
-  } else if ((isSafari || isChromeIos) && FileReader) {
-    if (data instanceof Blob) {
-      // no downloading of blob urls in Safari
-      var reader = new FileReader()
-      reader.onloadend = function () {
-        open(reader.result as string)
-      }
-      reader.readAsDataURL(data)
-    } else {
-      open(data)
-    }
-  } else {
-    let objectUrlCreated = false
-    if (data instanceof Blob) {
-      data = URL.createObjectURL(data)
-      objectUrlCreated = true
-    }
-
-    if ('download' in a) {
-      // download link available
-      a.style.display = 'hidden'
-      document.body.appendChild(a)
-      a.href = data
-      a.download = downloadName
-      a.target = '_blank'
-      a.click()
-      document.body.removeChild(a)
-    } else {
-      openUrl(data)
-    }
-
-    if (objectUrlCreated) {
-      window.URL.revokeObjectURL(data)
-    }
-  }
-}
-
-export function submit (url: string, data: FormData, callback: Function, onerror: Function) {
-  const xhr = new XMLHttpRequest()
-  xhr.open('POST', url)
-
-  xhr.addEventListener('load', function () {
-    if (xhr.status === 200 || xhr.status === 304) {
-      callback(xhr.response)
-    } else {
-      if (typeof onerror === 'function') {
-        onerror(xhr.status)
-      }
-    }
-  }, false)
-
-  xhr.send(data)
-}
-
-interface HTMLInputEvent extends Event {
-  target: HTMLInputElement & EventTarget
-}
-
-export function open (callback: Function, extensionList = ['*']) {
-  const fileInput = document.createElement('input')
-  fileInput.type = 'file'
-  fileInput.multiple = true
-  fileInput.style.display = 'hidden'
-  document.body.appendChild(fileInput)
-  fileInput.accept = '.' + extensionList.join(',.')
-  fileInput.addEventListener('change', function (e: HTMLInputEvent) {
-    callback(e.target.files)
-  }, false)
-
-  fileInput.click()
-}
-
-export function throttle (func: Function, wait: number, options: { leading?: boolean, trailing?: boolean }) {
-  // from http://underscorejs.org/docs/underscore.html
-
-  let context: any
-  let args: any
-  let result: any
-  let timeout: any = null
-  let previous = 0
-
-  if (!options) options = {}
-
-  function later () {
-    previous = options.leading === false ? 0 : Date.now()
-    timeout = null
-    result = func.apply(context, args)
-    if (!timeout) context = args = null
-  }
-
-  return function throttle (this: any) {
-    var now = Date.now()
-    if (!previous && options.leading === false) previous = now
-    var remaining = wait - (now - previous)
-    context = this
-    args = arguments
-    if (remaining <= 0 || remaining > wait) {
-      if (timeout) {
-        clearTimeout(timeout)
-        timeout = null
-      }
-      previous = now
-      result = func.apply(context, args)
-      if (!timeout) context = args = null
-    } else if (!timeout && options.trailing !== false) {
-      timeout = setTimeout(later, remaining)
-    }
-
-    return result
-  }
-}
 
 export function lexicographicCompare<T> (elm1: T, elm2: T) {
   if (elm1 < elm2) return -1
@@ -378,12 +142,6 @@ export function rangeInSortedArray (array: number[], min: number, max: number) {
   }
 }
 
-export function dataURItoImage (dataURI: string) {
-  const img = document.createElement('img')
-  img.src = dataURI
-  return img
-}
-
 export function uniqueArray (array: any[]) {
   return array.sort().filter(function (value, index, sorted) {
     return (index === 0) || (value !== sorted[ index - 1 ])
@@ -408,35 +166,6 @@ export function uint8ToString (u8a: Uint8Array) {
   } else {
     return String.fromCharCode.apply(null, u8a)
   }
-}
-
-export function uint8ToLines (u8a: Uint8Array, chunkSize = 1024 * 1024 * 10, newline = '\n') {
-  let partialLine = ''
-  let lines: string[] = []
-
-  for (let i = 0; i < u8a.length; i += chunkSize) {
-    const str = uint8ToString(u8a.subarray(i, i + chunkSize))
-    const idx = str.lastIndexOf(newline)
-
-    if (idx === -1) {
-      partialLine += str
-    } else {
-      const str2 = partialLine + str.substr(0, idx)
-      lines = lines.concat(str2.split(newline))
-
-      if (idx === str.length - newline.length) {
-        partialLine = ''
-      } else {
-        partialLine = str.substr(idx + newline.length)
-      }
-    }
-  }
-
-  if (partialLine !== '') {
-    lines.push(partialLine)
-  }
-
-  return lines
 }
 
 export type TypedArrayString = 'int8'|'int16'|'int32'|'uint8'|'uint16'|'uint32'|'float32'
@@ -554,23 +283,5 @@ export function createSimpleDict<K, V> (): SimpleDict<K, V> {
     add: function (k: K, v: V) { set[JSON.stringify(k)] = v },
     del: function (k: K) { delete set[JSON.stringify(k)] },
     get values () { return Object.keys(set).map(k => set[k]) }
-  }
-}
-
-export interface SimpleSet<T> {
-  has: (value: T) => boolean
-  add: (value: T) => void
-  del: (value: T) => void
-  list: T[]
-}
-
-export function createSimpleSet<T> (): SimpleSet<T> {
-  const set: { [k: string]: T } = {}
-
-  return {
-    has: function (v: T) { return set[JSON.stringify(v)] !== undefined },
-    add: function (v: T) { set[JSON.stringify(v)] = v },
-    del: function (v: T) { delete set[JSON.stringify(v)] },
-    get list () { return Object.keys(set).map(k => set[k]) },
   }
 }

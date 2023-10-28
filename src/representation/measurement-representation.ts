@@ -8,7 +8,6 @@
 import { Color, Vector3, Matrix4 } from 'three'
 
 import Selection from '../selection/selection'
-import { Browser } from '../globals'
 import { defaults } from '../utils'
 import StructureRepresentation, { StructureRepresentationParameters } from './structure-representation'
 import { uniformArray, uniformArray3 } from '../math/array-utils'
@@ -213,7 +212,7 @@ abstract class MeasurementRepresentation extends StructureRepresentation {
     this.labelFontFamily = defaults(p.labelFontFamily, 'sans-serif')
     this.labelFontStyle = defaults(p.labelFontstyle, 'normal')
     this.labelFontWeight = defaults(p.labelFontWeight, 'bold')
-    this.labelsdf = defaults(p.labelsdf, Browser === 'Chrome')
+    this.labelsdf = defaults(p.labelsdf, true)
     this.labelXOffset = defaults(p.labelXOffset, 0.0)
     this.labelYOffset = defaults(p.labelYOffset, 0.0)
     this.labelZOffset = defaults(p.labelZOffset, 0.5)
